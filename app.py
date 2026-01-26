@@ -46,7 +46,7 @@ def teardowns():
 
 @app.route("/portfolio-summary")
 def portfolio_summary():
-    return render_template("../static/portfolio-summary.html")
+    return render_template("portfolio-summary.html")
 
 
 if __name__ == "__main__":
