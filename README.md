@@ -2,7 +2,7 @@
 
 > A professional, multi-page portfolio showcasing AI product development, product thinking frameworks, and end-to-end execution capabilities.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://your-portfolio-url.onrender.com)
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://portfolio-o5n7.onrender.com)
 [![GitHub](https://img.shields.io/badge/github-repository-blue)](https://github.com/anubhav-product/Portfolio)
 [![LinkedIn](https://img.shields.io/badge/linkedin-connect-0077B5)](https://www.linkedin.com/in/anubhav-verma-746740250/)
 
@@ -234,4 +234,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Built with care by Anubhav Verma** | [View Live Demo](https://your-portfolio-url.onrender.com) | [Report Issues](https://github.com/anubhav-product/Portfolio/issues)
+**Built with care by Anubhav Verma** | [View Live Demo](https://portfolio-o5n7.onrender.com) | [Report Issues](https://github.com/anubhav-product/Portfolio/issues)
