@@ -1,23 +1,24 @@
 /*
-  Premium, clean UI for a PM portfolio.
-  - Strong hierarchy
-  - Soft surfaces + crisp borders
-  - Responsive and accessible
+  Dark, modern portfolio design
+  - Dark background with cyan accents
+  - Clean typography
+  - Professional developer aesthetic
 */
 
 :root {
-  --bg: #f7f8fb;
-  --surface: #ffffff;
-  --text: #101828;
-  --muted: #475467;
-  --border: #eaecf0;
-  --primary: #0f4c81;
-  --primary-dark: #0c3f6b;
-  --accent: #0ea5e9;
-  --success: #0e9f6e;
-  --shadow: 0 16px 40px rgba(16, 24, 40, 0.08);
-  --radius: 14px;
-  --max-width: 1120px;
+  --bg: #0a0e17;
+  --bg-secondary: #151922;
+  --surface: #1a1f2e;
+  --text: #e4e6eb;
+  --muted: #9ca3af;
+  --border: #2d3748;
+  --primary: #00d9ff;
+  --primary-dark: #00b8d4;
+  --accent: #00d9ff;
+  --success: #10b981;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --radius: 16px;
+  --max-width: 1200px;
 }
 
 * {
@@ -30,10 +31,11 @@ html {
 
 body {
   margin: 0;
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.65;
+  background: linear-gradient(135deg, #0a0e17 0%, #1a1f2e 100%);
 }
 
 a {
@@ -72,9 +74,9 @@ button:focus {
 .site-header {
   position: sticky;
   top: 0;
-  background: rgba(247, 248, 251, 0.94);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(10, 14, 23, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 217, 255, 0.1);
   z-index: 10;
 }
 
@@ -89,13 +91,10 @@ button:focus {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
   font-weight: 700;
-  border-radius: 12px;
-  background: var(--primary);
-  color: #fff;
-  letter-spacing: 0.02em;
+  font-size: 24px;
+  color: var(--primary);
+  letter-spacing: 0.05em;
 }
 
 .nav-links {
@@ -106,123 +105,158 @@ button:focus {
 }
 
 .nav-links a:hover {
-  color: var(--text);
+  color: var(--primary);
 }
 
 .section {
-  padding: 76px 0;
+  padding: 80px 0;
 }
 
 .section-alt {
-  background: #f1f3f7;
+  background: rgba(21, 25, 34, 0.5);
 }
 
 .section-header h3 {
-  margin: 0 0 8px;
-  font-size: 28px;
+  margin: 0 0 12px;
+  font-size: 32px;
+  color: var(--text);
 }
 
 .section-header p {
-  margin: 0 0 32px;
+  margin: 0 0 40px;
   color: var(--muted);
+  font-size: 18px;
 }
 
 .hero {
-  padding-top: 92px;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  text-align: center;
 }
 
 .hero-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 40px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 60px;
+}
+
+.hero-content {
+  max-width: 800px;
 }
 
 .eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 12px;
-  color: var(--muted);
-  margin-bottom: 12px;
+  letter-spacing: 0.15em;
+  font-size: 13px;
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .hero h1 {
-  font-size: 44px;
-  margin: 0 0 8px;
+  font-size: 64px;
+  margin: 0 0 16px;
+  background: linear-gradient(135deg, var(--primary) 0%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero h2 {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 400;
   color: var(--muted);
-  margin: 0 0 16px;
+  margin: 0 0 24px;
 }
 
 .lead {
-  font-size: 18px;
-  margin: 0 0 24px;
+  font-size: 20px;
+  margin: 0 0 40px;
+  color: var(--muted);
+  line-height: 1.8;
 }
 
 .button-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 16px;
+  justify-content: center;
 }
 
 .btn {
-  padding: 10px 18px;
-  border-radius: 10px;
-  border: 1px solid transparent;
+  padding: 14px 32px;
+  border-radius: 12px;
+  border: 2px solid transparent;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  transition: 0.15s ease;
+  gap: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .btn-primary {
   background: var(--primary);
-  color: #fff;
+  color: #000;
+  border-color: var(--primary);
 }
 
 .btn-primary:hover {
   background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
 }
 
 .btn-secondary {
-  border-color: var(--border);
-  background: #fff;
-  color: var(--text);
+  border-color: var(--primary);
+  background: transparent;
+  color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 217, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .btn-ghost {
-  border-color: rgba(15, 76, 129, 0.2);
-  background: rgba(15, 76, 129, 0.06);
+  border-color: var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+.btn-ghost:hover {
+  border-color: var(--primary);
   color: var(--primary);
 }
 
 .hero-card {
   background: var(--surface);
-  padding: 24px;
+  padding: 32px;
   border-radius: var(--radius);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(0, 217, 255, 0.2);
   box-shadow: var(--shadow);
+  max-width: 600px;
+  width: 100%;
 }
 
 .hero-card h3 {
   margin-top: 0;
+  color: var(--primary);
+  font-size: 20px;
 }
 
 .hero-meta {
-  margin-top: 16px;
-  padding-top: 16px;
+  margin-top: 20px;
+  padding-top: 20px;
   border-top: 1px solid var(--border);
   display: grid;
-  gap: 8px;
+  gap: 10px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .cards {
@@ -234,22 +268,31 @@ button:focus {
 .card {
   background: var(--surface);
   border-radius: var(--radius);
-  border: 1px solid var(--border);
-  padding: 24px;
+  border: 1px solid rgba(0, 217, 255, 0.15);
+  padding: 32px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 217, 255, 0.2);
 }
 
 .card h4 {
-  margin: 0 0 6px;
-  font-size: 20px;
+  margin: 0 0 8px;
+  font-size: 22px;
+  color: var(--text);
 }
 
 .card .subtitle {
   margin: 0;
   color: var(--muted);
+  font-size: 16px;
 }
 
 .card-content p {
@@ -265,6 +308,23 @@ button:focus {
 
 .text-link {
   color: var(--primary);
+  font-weight: 600;
+  position: relative;
+}
+
+.text-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.text-link:hover::after {
+  width: 100%;
 }
 
 .text-link:hover {
@@ -286,12 +346,20 @@ button:focus {
 .skill-card {
   background: var(--surface);
   border-radius: var(--radius);
-  border: 1px solid var(--border);
-  padding: 20px;
+  border: 1px solid rgba(0, 217, 255, 0.15);
+  padding: 28px;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
 }
 
 .skill-card h4 {
   margin-top: 0;
+  color: var(--primary);
+  font-size: 18px;
 }
 
 .skill-card ul {
@@ -328,14 +396,21 @@ button:focus {
 .thinking-card {
   background: var(--surface);
   border-radius: var(--radius);
-  border: 1px solid var(--border);
-  padding: 24px;
+  border: 1px solid rgba(0, 217, 255, 0.15);
+  padding: 28px;
   box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.thinking-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
 }
 
 .thinking-card h4 {
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   color: var(--primary);
+  font-size: 18px;
 }
 
 .thinking-context {
@@ -345,10 +420,11 @@ button:focus {
 }
 
 .thinking-rationale {
-  background: rgba(15, 76, 129, 0.05);
-  padding: 12px 16px;
-  border-radius: 8px;
-  margin: 12px 0;
+  background: rgba(0, 217, 255, 0.05);
+  padding: 16px 20px;
+  border-radius: 10px;
+  margin: 16px 0;
+  border-left: 3px solid var(--primary);
 }
 
 .thinking-rationale ul {
@@ -357,18 +433,19 @@ button:focus {
 }
 
 .thinking-outcome {
-  margin: 12px 0 0;
+  margin: 16px 0 0;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .tag {
-  background: #e6f6ef;
+  background: rgba(16, 185, 129, 0.15);
   color: var(--success);
-  padding: 2px 8px;
+  padding: 4px 12px;
   border-radius: 999px;
-  font-size: 12px;
-  margin-left: 6px;
+  font-size: 13px;
+  margin-left: 8px;
+  font-weight: 600;
 }
 
 .presence-grid {
@@ -379,44 +456,60 @@ button:focus {
 
 .presence-card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(0, 217, 255, 0.15);
   border-radius: var(--radius);
-  padding: 18px;
+  padding: 24px;
   box-shadow: var(--shadow);
-  transition: 0.15s ease;
+  transition: all 0.3s ease;
 }
 
 .presence-card:hover {
-  border-color: rgba(15, 76, 129, 0.4);
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0, 217, 255, 0.15);
 }
 
 .presence-card h4 {
-  margin: 0 0 6px;
+  margin: 0 0 8px;
+  color: var(--text);
 }
 
 .presence-card p {
   margin: 0;
   color: var(--muted);
+  font-size: 14px;
 }
 
 .contact-card {
   background: var(--surface);
   border-radius: var(--radius);
-  border: 1px solid var(--border);
-  padding: 20px;
+  border: 1px solid rgba(0, 217, 255, 0.15);
+  padding: 32px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .contact-card a {
   color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+  color: var(--primary-dark);
 }
 
 .site-footer {
-  padding: 24px 0 48px;
+  padding: 40px 0;
   color: var(--muted);
   font-size: 14px;
+  border-top: 1px solid rgba(0, 217, 255, 0.1);
 }
 
 @media (max-width: 900px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
   .hero-grid,
   .cards,
   .skill-grid,
@@ -427,6 +520,14 @@ button:focus {
 
   .nav-links {
     display: none;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .btn {
+    width: 100%;
   }
 }
 
@@ -439,14 +540,14 @@ button:focus {
 
 @media (max-width: 600px) {
   .hero h1 {
-    font-size: 34px;
+    font-size: 36px;
+  }
+
+  .lead {
+    font-size: 16px;
   }
 
   .section {
-    padding: 56px 0;
-  }
-
-  .btn {
-    width: 100%;
+    padding: 48px 0;
   }
 }
