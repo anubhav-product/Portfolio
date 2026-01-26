@@ -13,11 +13,13 @@
   <meta property="og:url" content="https://portfolio-o5n7.onrender.com/" />
   <meta property="og:title" content="Anubhav Verma | Product Manager - AI & Decision-Support Products" />
   <meta property="og:description" content="Product Manager who shipped 2 AI products from 0-to-1. Specialized in decision-support tools. B.E. Chemical Engineering (BITS Goa) + Duke AI PM + McKinsey Forward." />
+  <meta property="og:image" content="https://portfolio-o5n7.onrender.com/static/og-image.png" />
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Anubhav Verma | Product Manager - AI & Decision-Support Products" />
   <meta name="twitter:description" content="Product Manager who shipped 2 AI products from 0-to-1. Specialized in decision-support tools." />
+  <meta name="twitter:image" content="https://portfolio-o5n7.onrender.com/static/og-image.png" />
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" />
@@ -37,6 +39,7 @@
         <a href="{{ url_for('projects') }}" {% if request.endpoint == 'projects' %}class="active"{% endif %}>Projects</a>
         <a href="{{ url_for('product_thinking') }}" {% if request.endpoint == 'product_thinking' %}class="active"{% endif %}>Thinking</a>
         <a href="{{ url_for('frameworks') }}" {% if request.endpoint == 'frameworks' %}class="active"{% endif %}>Frameworks</a>
+        <a href="{{ url_for('teardowns') }}" {% if request.endpoint == 'teardowns' %}class="active"{% endif %}>Teardowns</a>
         <a href="{{ url_for('skills') }}" {% if request.endpoint == 'skills' %}class="active"{% endif %}>Skills</a>
         <a href="{{ url_for('contact') }}" {% if request.endpoint == 'contact' %}class="active"{% endif %}>Contact</a>
       </div>
@@ -57,6 +60,19 @@
   <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
     ↑
   </button>
+
+  <!-- Floating resume download button -->
+  <a href="{{ url_for('static', filename='resume/resume.pdf') }}" 
+     class="floating-resume-btn" 
+     aria-label="Download Resume" 
+     download
+     target="_blank">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 13L6 9H8V3H12V9H14L10 13Z" fill="currentColor"/>
+      <path d="M4 15H16V17H4V15Z" fill="currentColor"/>
+    </svg>
+    Resume
+  </a>
 
   <!-- Scroll progress bar -->
   <div class="scroll-progress" id="scrollProgress"></div>

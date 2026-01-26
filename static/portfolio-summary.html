@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anubhav Verma - Portfolio Summary</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #0066cc;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        
+        h2 {
+            color: #0066cc;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 5px;
+        }
+        
+        h3 {
+            color: #333;
+            font-size: 16px;
+            margin-top: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .contact {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .stat-box {
+            background: #f5f5f5;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            border-left: 3px solid #0066cc;
+        }
+        
+        .stat-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0066cc;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 11px;
+            color: #666;
+            margin-top: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 12px;
+        }
+        
+        li {
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+        
+        strong {
+            color: #333;
+        }
+        
+        .project {
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid #e0e0e0;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .skill-category {
+            background: #f9f9f9;
+            padding: 12px;
+            border-radius: 6px;
+        }
+        
+        .skill-category h3 {
+            font-size: 14px;
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #0066cc;
+        }
+        
+        .skill-category ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+        
+        .skill-category li {
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+        
+        .footer {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 11px;
+            color: #999;
+            text-align: center;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>ANUBHAV VERMA</h1>
+    <div class="subtitle">Product Manager | AI & Decision-Support Products</div>
+    
+    <div class="contact">
+        <span>📧 anubhavvermait@gmail.com</span>
+        <span>🔗 linkedin.com/in/anubhav-verma-it</span>
+        <span>💻 github.com/anubhav-product</span>
+        <span>🌐 portfolio-o5n7.onrender.com</span>
+    </div>
+    
+    <div class="stats">
+        <div class="stat-box">
+            <span class="stat-value">2</span>
+            <span class="stat-label">AI Products Shipped</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-value">90%</span>
+            <span class="stat-label">Time Reduction</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-value">25+</span>
+            <span class="stat-label">User Interviews</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-value">7+</span>
+            <span class="stat-label">PM Frameworks</span>
+        </div>
+    </div>
+    
+    <h2>About Me</h2>
+    <p style="font-size: 13px; margin-bottom: 12px;">
+        Product Manager specializing in AI-powered decision-support tools. I build products that help professionals make faster, more confident decisions through structured frameworks and AI-powered analysis. Proven ability to ship complete products independently—from user research through technical implementation to production deployment.
+    </p>
+    
+    <h2>Featured Projects</h2>
+    
+    <div class="project">
+        <h3>Product Playground - AI Product Strategy Platform</h3>
+        <ul>
+            <li><strong>Impact:</strong> Reduced product decision analysis time from 3 hours to 15 minutes (90% reduction)</li>
+            <li><strong>Validation:</strong> Tested with 10+ Product Managers, 8/10 rated urgency to use it</li>
+            <li><strong>Features:</strong> 7+ analysis frameworks (Problem Framing, Root Cause Analysis, RICE+Trust, Risk Assessment)</li>
+            <li><strong>Tech Stack:</strong> Python, Flask, OpenAI GPT-4o, deployed on Render</li>
+            <li><strong>User Feedback:</strong> "Cuts decision-making time by 70%" - Senior PM, SaaS company</li>
+        </ul>
+    </div>
+    
+    <div class="project">
+        <h3>AI Interview & Resume Screening Copilot</h3>
+        <ul>
+            <li><strong>Impact:</strong> Bias-free candidate assessment with 100% explainability</li>
+            <li><strong>Validation:</strong> Tested with 8 recruiters and 15 job seekers</li>
+            <li><strong>Approach:</strong> No numeric scores - provides qualitative analysis with human-in-the-loop decision-making</li>
+            <li><strong>Tech Stack:</strong> Python, Flask, OpenAI API, PDF parsing, deployed on Render</li>
+            <li><strong>User Feedback:</strong> "Finally, an AI tool I can trust to be fair" - HR Manager</li>
+        </ul>
+    </div>
+    
+    <h2>Core Skills</h2>
+    
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h3>Product Management</h3>
+            <ul>
+                <li>User Research & Interviews</li>
+                <li>Product Strategy & Roadmapping</li>
+                <li>Framework Application (RICE, Jobs-to-be-Done)</li>
+                <li>Feature Prioritization</li>
+                <li>Stakeholder Communication</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>Python (Flask, APIs)</li>
+                <li>AI/ML (OpenAI GPT-4o, Prompt Engineering)</li>
+                <li>SQL & Data Analysis</li>
+                <li>Git/GitHub, Cloud Deployment (Render)</li>
+                <li>HTML, CSS, JavaScript</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3>Soft Skills</h3>
+            <ul>
+                <li>Cross-functional Collaboration</li>
+                <li>Data-Driven Decision Making</li>
+                <li>Customer Empathy</li>
+                <li>Problem Solving & Critical Thinking</li>
+                <li>Written & Verbal Communication</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3>PM Frameworks</h3>
+            <ul>
+                <li>RICE Prioritization (+ Trust Factor)</li>
+                <li>Jobs-to-be-Done (JTBD)</li>
+                <li>Problem Framing Canvas</li>
+                <li>Root Cause Analysis (5 Whys)</li>
+                <li>ICE Scoring, Risk Assessment</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h2>Education & Certifications</h2>
+    <ul>
+        <li><strong>B.E. Chemical Engineering</strong> - BITS Pilani, Goa Campus (2019-2023)</li>
+        <li><strong>AI Product Management Specialization</strong> - Duke University (Coursera)</li>
+        <li><strong>McKinsey Forward Program</strong> - Strategic Thinking & Problem Solving</li>
+    </ul>
+    
+    <h2>What Sets Me Apart</h2>
+    <ul>
+        <li><strong>Full-stack PM:</strong> Not just strategy—I ship code, deploy products, and own the entire lifecycle</li>
+        <li><strong>User-first mindset:</strong> 25+ interviews conducted, every feature validated before building</li>
+        <li><strong>AI explainability:</strong> Focus on trust and transparency, not black-box solutions</li>
+        <li><strong>Quantifiable impact:</strong> Every product metric is measurable and validated</li>
+    </ul>
+    
+    <div class="footer">
+        Generated from portfolio-o5n7.onrender.com | Available for immediate interview | Preferred start: ASAP
+    </div>
+</body>
+</html>

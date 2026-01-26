@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+
+{% block title %}Case Study: Product Playground - Anubhav Verma{% endblock %}
+{% block description %}Deep-dive case study: How I built an AI-powered product strategy platform from 0-to-1{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h3>Case Study: Product Playground</h3>
+      <p>A deep-dive into building an AI-powered product strategy platform from scratch</p>
+    </div>
+
+    <!-- Problem -->
+    <div class="framework-section fade-in">
+      <div class="framework-header">
+        <h4>🎯 Problem: PMs Struggle with Structured Decision-Making</h4>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.02); padding: 32px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        <h5 style="color: var(--primary); margin: 0 0 16px;">The Pain Point</h5>
+        <p style="margin-bottom: 20px;">Through conversations with 10+ Product Managers across early-stage startups and growth companies, I identified a consistent pattern:</p>
+        <ul style="margin: 0; padding-left: 20px; color: rgba(255, 255, 255, 0.85);">
+          <li style="margin-bottom: 12px;"><strong>Time sink:</strong> PMs spent 3-5 hours analyzing product decisions manually</li>
+          <li style="margin-bottom: 12px;"><strong>Inconsistent frameworks:</strong> Most used gut-feel or ad-hoc analysis without structured methodology</li>
+          <li style="margin-bottom: 12px;"><strong>Context switching:</strong> Jumping between Google Docs, spreadsheets, and whiteboards</li>
+          <li style="margin-bottom: 12px;"><strong>Knowledge loss:</strong> Decision rationale wasn't documented, causing repeated analysis</li>
+        </ul>
+        <div style="margin-top: 24px; padding: 16px; background: rgba(255, 165, 0, 0.1); border-left: 3px solid #ffa500; border-radius: 4px;">
+          <p style="margin: 0; color: #ffa500;"><strong>Key insight from interviews:</strong> "I know I should use frameworks, but it takes too long to apply them manually. By the time I finish, the decision window has passed." — PM at fintech startup</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research -->
+    <div class="framework-section fade-in">
+      <div class="framework-header">
+        <h4>🔍 Research: Validating the Problem</h4>
+      </div>
+      <div class="framework-grid">
+        <div class="framework-box">
+          <h5>User Interviews (n=12)</h5>
+          <ul style="margin: 12px 0 0; padding-left: 20px; font-size: 14px;">
+            <li>8 PMs (early-career to senior)</li>
+            <li>3 Product Leads</li>
+            <li>1 CPO at Series A startup</li>
+          </ul>
+          <p style="margin-top: 12px; font-size: 14px; color: var(--muted);"><strong>Finding:</strong> 100% confirmed time sink, 75% wanted AI assistance</p>
+        </div>
+        <div class="framework-box">
+          <h5>Competitive Analysis</h5>
+          <ul style="margin: 12px 0 0; padding-left: 20px; font-size: 14px;">
+            <li>Existing tools: ProductPlan, Aha!, Linear</li>
+            <li>Gap: None offered AI-powered decision frameworks</li>
+            <li>Opportunity: Decision-support, not just tracking</li>
+          </ul>
+          <p style="margin-top: 12px; font-size: 14px; color: var(--muted);"><strong>Differentiation:</strong> Structured AI reasoning vs. generic chatbots</p>
+        </div>
+        <div class="framework-box">
+          <h5>Problem Validation Metrics</h5>
+          <ul style="margin: 12px 0 0; padding-left: 20px; font-size: 14px;">
+            <li>Average decision analysis time: 3.2 hours</li>
+            <li>Willingness to pay: $29-49/month</li>
+            <li>Urgency score: 8/10</li>
+          </ul>
+          <p style="margin-top: 12px; font-size: 14px; color: var(--muted);"><strong>Decision:</strong> Problem worth solving ✅</p>
+        </div>
+        <div class="framework-box">
+          <h5>MVP Scoping</h5>
+          <ul style="margin: 12px 0 0; padding-left: 20px; font-size: 14px;">
+            <li>Must-have: Problem framing, RCA, tradeoffs</li>
+            <li>Should-have: KPI diagnostics, teardowns</li>
+            <li>Won't-have (V1): Integrations, collaboration</li>
+          </ul>
+          <p style="margin-top: 12px; font-size: 14px; color: var(--muted);"><strong>Timeline:</strong> 4-week MVP build</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Solution -->
+    <div class="framework-section fade-in">
+      <div class="framework-header">
+        <h4>🛠️ Solution: AI-Powered Decision Framework Engine</h4>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.02); padding: 32px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        <h5 style="color: var(--primary); margin: 0 0 20px;">What I Built</h5>
+        <div class="framework-grid" style="margin-bottom: 24px;">
+          <div style="padding: 20px; background: rgba(0, 217, 255, 0.05); border-radius: 8px;">
+            <h6 style="color: var(--primary); margin: 0 0 12px;">Feature 1: Product Challenge Analysis</h6>
+            <p style="margin: 0; font-size: 14px;">7-dimensional framework covering problem framing, KPI diagnostics, root cause analysis, risk assessment, and next-step recommendations</p>
+          </div>
+          <div style="padding: 20px; background: rgba(0, 217, 255, 0.05); border-radius: 8px;">
+            <h6 style="color: var(--primary); margin: 0 0 12px;">Feature 2: Product Teardown</h6>
+            <p style="margin: 0; font-size: 14px;">Competitive analysis from any URL analyzing market positioning, business model, strategic risks</p>
+          </div>
+          <div style="padding: 20px; background: rgba(0, 217, 255, 0.05); border-radius: 8px;">
+            <h6 style="color: var(--primary); margin: 0 0 12px;">Feature 3: KPI Diagnostics</h6>
+            <p style="margin: 0; font-size: 14px;">Deep-dive into 8 core product metrics with cross-metric insights and actionable recommendations</p>
+          </div>
+        </div>
+        <h5 style="color: var(--primary); margin: 24px 0 16px;">Technical Architecture</h5>
+        <ul style="margin: 0; padding-left: 20px; color: rgba(255, 255, 255, 0.85);">
+          <li style="margin-bottom: 10px;"><strong>Backend:</strong> Python Flask for API, modular prompt engineering for GPT-4o</li>
+          <li style="margin-bottom: 10px;"><strong>AI Layer:</strong> Structured prompts with few-shot examples, output validation, fallback handling</li>
+          <li style="margin-bottom: 10px;"><strong>Frontend:</strong> Vanilla JS, responsive CSS, real-time streaming responses</li>
+          <li style="margin-bottom: 10px;"><strong>Deployment:</strong> Render.com with auto-scaling, environment variable management</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="framework-section fade-in">
+      <div class="framework-header">
+        <h4>📊 Results: Impact & Learnings</h4>
+      </div>
+      <div class="stats-grid" style="margin-bottom: 32px;">
+        <div class="stat-card">
+          <div class="stat-number">90%</div>
+          <div class="stat-label">Time Reduction (3hr → 15min)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Active Users Testing</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">7</div>
+          <div class="stat-label">Decision Frameworks</div>
+        </div>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.02); padding: 32px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        <h5 style="color: var(--primary); margin: 0 0 16px;">User Feedback</h5>
+        <div style="display: grid; gap: 16px; margin-bottom: 24px;">
+          <div style="padding: 16px; background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10b981; border-radius: 4px;">
+            <p style="margin: 0; color: rgba(255, 255, 255, 0.85);">"This cuts my decision-making time by 70%. The RCA framework alone is worth it." <span style="color: var(--muted); font-size: 14px;">— Senior PM, SaaS Company</span></p>
+          </div>
+          <div style="padding: 16px; background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10b981; border-radius: 4px;">
+            <p style="margin: 0; color: rgba(255, 255, 255, 0.85);">"Finally, a tool that helps me think, not just organize tasks." <span style="color: var(--muted); font-size: 14px;">— PM, Fintech Startup</span></p>
+          </div>
+        </div>
+        <h5 style="color: var(--primary); margin: 24px 0 16px;">Key Learnings</h5>
+        <div class="framework-grid">
+          <div class="framework-box">
+            <h5 style="color: #10b981;">✅ What Worked</h5>
+            <ul style="font-size: 14px; margin: 12px 0 0; padding-left: 20px;">
+              <li>Structured prompts > generic AI chat</li>
+              <li>7 frameworks = comprehensive coverage</li>
+              <li>Real-time streaming = better UX</li>
+            </ul>
+          </div>
+          <div class="framework-box">
+            <h5 style="color: #ffa500;">⚠️ What I'd Improve</h5>
+            <ul style="font-size: 14px; margin: 12px 0 0; padding-left: 20px;">
+              <li>Add export to PDF/Notion</li>
+              <li>Save analysis history</li>
+              <li>Team collaboration features</li>
+            </ul>
+          </div>
+          <div class="framework-box">
+            <h5 style="color: var(--primary);">🎯 Product Decisions</h5>
+            <ul style="font-size: 14px; margin: 12px 0 0; padding-left: 20px;">
+              <li>Chose depth over breadth (7 frameworks done well)</li>
+              <li>Solo build = full control, faster iteration</li>
+              <li>Free tier = validation before monetization</li>
+            </ul>
+          </div>
+          <div class="framework-box">
+            <h5 style="color: var(--primary);">📈 Next Steps</h5>
+            <ul style="font-size: 14px; margin: 12px 0 0; padding-left: 20px;">
+              <li>V2: Add collaboration, history, integrations</li>
+              <li>Monetization: Freemium model ($29/month)</li>
+              <li>Scale: User onboarding, analytics dashboard</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-banner fade-in" style="margin-top: 60px;">
+      <div class="cta-content">
+        <h3>Try Product Playground</h3>
+        <p>Experience the AI-powered decision framework engine yourself</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="https://productplayground-1.onrender.com/" target="_blank" rel="noopener">Live Demo</a>
+        <a class="btn btn-secondary" href="https://github.com/anubhav-product/ProductPlayGround" target="_blank" rel="noopener">View Code</a>
+        <a class="btn btn-ghost" href="{{ url_for('projects') }}">Back to Projects</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

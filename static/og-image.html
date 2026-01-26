@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1">
+    <title>OG Image Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 1200px;
+            height: 630px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0a0e17 0%, #1a1f2e 100%);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 60px;
+            max-width: 900px;
+        }
+        
+        .name {
+            font-size: 72px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        
+        .title {
+            font-size: 42px;
+            color: #00d9ff;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .tagline {
+            font-size: 28px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 48px;
+            font-weight: bold;
+            color: #00d9ff;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 8px;
+        }
+        
+        .accent-line {
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, #00d9ff, #00a8cc);
+            margin: 0 auto 30px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="accent-line"></div>
+        <div class="name">ANUBHAV VERMA</div>
+        <div class="title">Product Manager | AI Products</div>
+        <div class="tagline">Building decision-support tools that reduce analysis time by 90%</div>
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-value">2</span>
+                <span class="stat-label">AI Products Shipped</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">10x</span>
+                <span class="stat-label">Faster Decisions</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">7+</span>
+                <span class="stat-label">PM Frameworks</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
