@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+
+{% block title %}Anubhav Verma - Product Manager{% endblock %}
+{% block description %}Early-career Product Manager specializing in AI-powered decision-support products{% endblock %}
+
+{% block content %}
+<section id="top" class="section hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <p class="eyebrow">Product Manager — AI & Decision-Support Products</p>
+      <h1>Anubhav Verma</h1>
+      <h2 id="typed-text">Product Manager | AI &amp; Decision-Support Products</h2>
+      <p class="lead">
+        I build and ship AI-powered products that help teams make better decisions under uncertainty.
+      </p>
+      <div class="button-row">
+        <a class="btn btn-primary" href="{{ url_for('projects') }}">View Projects</a>
+        <a class="btn btn-secondary" href="{{ url_for('static', filename='resume/resume.pdf') }}" download="Anubhav_Verma_Resume.pdf">Download Resume</a>
+        <a class="btn btn-secondary" href="https://github.com/anubhav-product" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/anubhav-verma-746740250/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="hero-card" aria-label="Summary card">
+      <h3>Product Focus</h3>
+      <ul>
+        <li>0-to-1 AI product development</li>
+        <li>Decision-support &amp; workflow automation</li>
+        <li>Explainable AI &amp; responsible product design</li>
+        <li>Cross-functional execution in ambiguous spaces</li>
+      </ul>
+      <div class="hero-meta">
+        <span><strong>Education:</strong> B.E. Chemical Engineering, BITS Pilani Goa</span>
+        <span><strong>Location:</strong> Remote / India</span>
+        <span><strong>Open to:</strong> PM, APM, AI Product Manager roles</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Me Section -->
+<section class="section about-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h3>About Me</h3>
+      <p>Building AI products that drive decisions, not just automate tasks.</p>
+    </div>
+    <div class="about-content">
+      <div class="about-main fade-in">
+        <p class="about-intro">
+          I'm a product manager with an engineering mindset. Trained as a chemical engineer at BITS Pilani Goa, I approach product problems the way I was taught to approach process optimization: define constraints, map dependencies, design for the outcome you need—not just the one that's easiest to build.
+        </p>
+        <p>
+          Over the past two years, I've specialized in AI-powered decision-support products—tools that don't replace human judgment, but augment it. I've shipped two end-to-end products from 0-to-1, covering everything from problem scoping and technical architecture to go-to-market execution.
+        </p>
+        <p>
+          What sets my work apart is intentional restraint. In a space obsessed with automation, I design AI that explains itself, surfaces tradeoffs, and preserves human agency. Every product decision I make answers three questions: <em>Does this solve a real problem? Can users trust it? Will it scale responsibly?</em>
+        </p>
+      </div>
+      
+      <div class="about-highlights">
+        <div class="highlight-card scale-in stagger-1">
+          <div class="highlight-icon">🎯</div>
+          <h4>Product Philosophy</h4>
+          <p>Decision-support over automation. Explainability over black boxes. User agency over algorithmic control.</p>
+        </div>
+        <div class="highlight-card scale-in stagger-2">
+          <div class="highlight-icon">🔬</div>
+          <h4>Problem-Solving Approach</h4>
+          <p>Start with root cause analysis. Frame problems before solutions. Make tradeoffs explicit, not implicit.</p>
+        </div>
+        <div class="highlight-card scale-in stagger-3">
+          <div class="highlight-icon">⚡</div>
+          <h4>Execution Mindset</h4>
+          <p>Ship fast, learn faster. Validate assumptions with data. Balance speed with long-term product integrity.</p>
+        </div>
+      </div>
+
+      <div class="about-journey fade-in">
+        <h4>My Journey to Product</h4>
+        <div class="timeline">
+          <div class="timeline-item slide-in-left stagger-1">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h5>Engineering Foundation at BITS Goa</h5>
+              <p>B.E. in Chemical Engineering from BITS Pilani, Goa Campus. Transitioned from process engineering to tech—building fluency in Python, SQL, and system design that now informs how I scope feasibility and partner with technical teams.</p>
+            </div>
+          </div>
+          <div class="timeline-item slide-in-left stagger-2">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h5>0-to-1 Product Development</h5>
+              <p>Shipped Product Playground and AI Interview Copilot—both designed to solve ambiguous problems with structured, explainable AI systems.</p>
+            </div>
+          </div>
+          <div class="timeline-item slide-in-left stagger-3">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h5>Strategic PM Training</h5>
+              <p>Completed AI Product Management (Duke) and McKinsey Forward Program, formalizing frameworks for strategy, prioritization, and stakeholder alignment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quick Stats Section -->
+<section class="section stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card scale-in stagger-1">
+        <div class="stat-number" data-target="2">0</div>
+        <div class="stat-label">AI Products Shipped</div>
+      </div>
+      <div class="stat-card scale-in stagger-2">
+        <div class="stat-number" data-target="10">0</div>
+        <div class="stat-label">Product Frameworks Used</div>
+      </div>
+      <div class="stat-card scale-in stagger-3">
+        <div class="stat-number" data-target="100">0</div>
+        <div class="stat-label">% Decision-Driven</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-banner fade-in">
+      <div class="cta-content">
+        <h3>Let's Build Products That Matter</h3>
+        <p>Looking for a PM who combines technical depth with strategic product thinking? Let's connect.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="{{ url_for('contact') }}">Get in Touch</a>
+        <a class="btn btn-secondary" href="{{ url_for('projects') }}">View My Work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <h3>How I Think as a Product Manager</h3>
+      <p>Principles that guide my decisions and execution.</p>
+    </div>
+    <ul class="bullets">
+      <li>Start with problem framing before solutions</li>
+      <li>Make tradeoffs explicit</li>
+      <li>Use metrics as signals, not goals</li>
+      <li>Balance user value, business goals, and execution constraints</li>
+      <li>Design AI systems with guardrails and explainability</li>
+    </ul>
+  </div>
+</section>
+{% endblock %}
+
+{% block page_scripts %}
+<script>
+  // Typing animation
+  const typingElement = document.getElementById('typed-text');
+  const messages = [
+    "Product Manager | AI & Decision-Support Products",
+    "Building products that help teams decide better",
+    "Turning ambiguity into shipped products"
+  ];
+  let messageIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    const currentMessage = messages[messageIndex];
+    
+    if (isDeleting) {
+      typingElement.textContent = currentMessage.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      typingElement.textContent = currentMessage.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    let typeSpeed = isDeleting ? 30 : 80;
+
+    if (!isDeleting && charIndex === currentMessage.length) {
+      typeSpeed = 2000;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      messageIndex = (messageIndex + 1) % messages.length;
+      typeSpeed = 500;
+    }
+
+    setTimeout(typeEffect, typeSpeed);
+  }
+
+  typeEffect();
+
+  // Stats counter animation
+  function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-target'));
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+
+    const updateCounter = () => {
+      current += increment;
+      if (current < target) {
+        element.textContent = Math.floor(current);
+        requestAnimationFrame(updateCounter);
+      } else {
+        element.textContent = target;
+      }
+    };
+
+    updateCounter();
+  }
+
+  // Trigger stats counter on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    statNumbers.forEach(animateCounter);
+  });
+</script>
+{% endblock %}

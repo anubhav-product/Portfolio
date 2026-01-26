@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - Anubhav Verma{% endblock %}
+{% block description %}Featured AI products showcasing end-to-end product development{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h3>End-to-End Products</h3>
+      <p>AI products independently built and deployed—from problem discovery through technical architecture to live production. Each represents full ownership of the product lifecycle.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card fade-in stagger-1">
+        <header>
+          <h4>Product Playground</h4>
+          <p class="subtitle">AI-powered product strategy &amp; analytics platform for Product Managers.</p>
+        </header>
+        <div class="card-content">
+          <p><strong>Impact:</strong> Reduces product decision analysis time by 10x using structured AI frameworks across 7+ dimensions—problem framing, root cause analysis, tradeoff evaluation, risk assessment, and next-step recommendations.</p>
+          <div class="metrics-row">
+            <div class="metric-item">
+              <span class="metric-value">7+</span>
+              <span class="metric-label">Analysis Frameworks</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">3</span>
+              <span class="metric-label">Core Features</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">GPT-4o</span>
+              <span class="metric-label">AI Model</span>
+            </div>
+          </div>
+          <p><strong>Key capabilities:</strong></p>
+          <ul class="feature-list">
+            <li><strong>Product Challenge Analysis:</strong> Problem framing, KPI diagnostics, RCA, risk assessment, tradeoffs, next-step guidance</li>
+            <li><strong>Product Teardown:</strong> Comprehensive competitive analysis from any website URL—market positioning, business model assessment, strategic risks</li>
+            <li><strong>Dashboard KPI Diagnostics:</strong> Deep-dive into 8 core product metrics with cross-metric insights</li>
+          </ul>
+          <p><strong>Tech stack:</strong> Python, Flask, OpenAI GPT-4o</p>
+        </div>
+        <footer class="card-footer">
+          <a href="https://productplayground-1.onrender.com/" class="text-link" aria-label="Product Playground live link" target="_blank" rel="noopener">Live Demo</a>
+          <a href="https://github.com/anubhav-product/ProductPlayGround" class="text-link" aria-label="Product Playground GitHub" target="_blank" rel="noopener">GitHub</a>
+        </footer>
+      </article>
+
+      <article class="card fade-in stagger-2">
+        <header>
+          <h4>AI Interview &amp; Resume Screening Copilot</h4>
+          <p class="subtitle">Resume–JD analysis and career decision-support platform.</p>
+        </header>
+        <div class="card-content">
+          <p><strong>Impact:</strong> Provides explainable, bias-free candidate assessment without automated hire/reject decisions—designed for human-in-the-loop decision-making.</p>
+          <div class="metrics-row">
+            <div class="metric-item">
+              <span class="metric-value">0</span>
+              <span class="metric-label">Numeric Scores (Intentional)</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">3</span>
+              <span class="metric-label">Readiness Levels</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">100%</span>
+              <span class="metric-label">Explainable</span>
+            </div>
+          </div>
+          <p><strong>Key capabilities:</strong></p>
+          <ul class="feature-list">
+            <li><strong>No scoring system:</strong> Qualitative job-readiness indicators (Strong/Developing/Early) with explanations</li>
+            <li><strong>Explainable insights:</strong> Skill gaps include why they matter + how to improve</li>
+            <li><strong>Dual perspective:</strong> Serves both recruiters (interview focus) and candidates (career guidance)</li>
+          </ul>
+          <p><strong>Tech stack:</strong> Python, Flask, OpenAI, PDF parsing</p>
+          <p><strong>Product decision:</strong> Deliberately avoided numeric scores to prevent false precision and over-reliance on AI.</p>
+        </div>
+        <footer class="card-footer">
+          <a href="https://anubhavproduct.pythonanywhere.com/" class="text-link" aria-label="AI Interview Copilot live link" target="_blank" rel="noopener">Live Demo</a>
+          <a href="https://github.com/anubhav-product/ai-interview-resume-copilot" class="text-link" aria-label="AI Interview Copilot GitHub" target="_blank" rel="noopener">GitHub</a>
+        </footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h3>Online Presence</h3>
+      <p>Live projects and professional profiles.</p>
+    </div>
+    <div class="presence-grid">
+      <a class="presence-card scale-in stagger-1" href="https://anubhavproduct.pythonanywhere.com/" aria-label="Resume website" target="_blank" rel="noopener">
+        <h4>Resume</h4>
+        <p>anubhavproduct.pythonanywhere.com</p>
+      </a>
+      <a class="presence-card scale-in stagger-2" href="https://github.com/anubhav-product/ProductPlayGround" aria-label="Product Playground project" target="_blank" rel="noopener">
+        <h4>Product Playground</h4>
+        <p>AI Product Strategy Platform</p>
+      </a>
+      <a class="presence-card scale-in stagger-3" href="https://github.com/anubhav-product/ai-interview-resume-copilot" aria-label="AI Interview Copilot project" target="_blank" rel="noopener">
+        <h4>AI Interview Copilot</h4>
+        <p>Resume Screening Platform</p>
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

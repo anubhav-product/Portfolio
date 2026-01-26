@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Product Thinking - Anubhav Verma{% endblock %}
+{% block description %}Real decisions and tradeoffs from building AI products{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h3>Product Thinking in Action</h3>
+      <p>Real product decisions and tradeoffs from building AI systems—showing how engineering training informs responsible product design.</p>
+    </div>
+    <div class="thinking-grid">
+      <div class="thinking-card fade-in stagger-1">
+        <h4>🎯 Decision: No Hiring Scores in Resume Copilot</h4>
+        <p class="thinking-context"><strong>Context:</strong> Hiring AI tools often provide numeric "fit scores" (e.g., 72% match).</p>
+        <p><strong>Decision made:</strong> Avoided all numeric scoring. Used qualitative indicators (Strong/Developing/Early) with explanations.</p>
+        <div class="thinking-rationale">
+          <p><strong>Why:</strong></p>
+          <ul>
+            <li>Numeric scores imply false precision</li>
+            <li>Users may over-trust numbers without understanding reasoning</li>
+            <li>Hiring decisions require context beyond resumes</li>
+          </ul>
+        </div>
+        <p class="thinking-outcome"><strong>Outcome:</strong> Higher trust, explainability, and responsible AI design.</p>
+      </div>
+
+      <div class="thinking-card scale-in stagger-2">
+        <h4>⚖️ Tradeoff: Automation vs. Human Judgment</h4>
+        <p class="thinking-context"><strong>Context:</strong> Could have built automated hire/reject recommendations.</p>
+        <p><strong>Decision made:</strong> Designed as decision-support tool, not automation. AI supports—doesn't replace—human judgment.</p>
+        <div class="thinking-rationale">
+          <p><strong>Tradeoff:</strong></p>
+          <ul>
+            <li><strong>Gave up:</strong> Full automation, faster throughput</li>
+            <li><strong>Gained:</strong> User trust, legal safety, ethical responsibility</li>
+          </ul>
+        </div>
+        <p class="thinking-outcome"><strong>Result:</strong> Product positioned for long-term adoption with responsible AI practices.</p>
+      </div>
+
+      <div class="thinking-card fade-in stagger-3">
+        <h4>🔍 Feature Scoping: What NOT to Build</h4>
+        <p class="thinking-context"><strong>Context:</strong> Could have added ATS integrations, resume ranking, job auto-apply.</p>
+        <p><strong>Decision made:</strong> Explicitly excluded these features in V1.</p>
+        <div class="thinking-rationale">
+          <p><strong>Reasoning:</strong></p>
+          <ul>
+            <li>Adds complexity without improving core user value</li>
+            <li>Increases privacy, bias, and legal risks</li>
+            <li>Distracts from validating core product hypothesis</li>
+          </ul>
+        </div>
+        <p class="thinking-outcome"><strong>Impact:</strong> Faster MVP validation, clearer product focus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

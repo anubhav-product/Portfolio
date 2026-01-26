@@ -31,7 +31,7 @@
         <div class="hero-content">
           <p class="eyebrow">Early-career Product Manager</p>
           <h1>Anubhav Verma</h1>
-          <h2>Product Manager | AI &amp; Decision-Support Products</h2>
+          <h2 id="typed-text">Product Manager | AI &amp; Decision-Support Products</h2>
           <p class="lead">
             I build and ship AI-powered products that help teams make better decisions under uncertainty.
           </p>
@@ -39,7 +39,7 @@
             <a class="btn btn-primary" href="#projects">View Projects</a>
             <a class="btn btn-secondary" href="{{ url_for('static', filename='resume/resume.pdf') }}" download="Anubhav_Verma_Resume.pdf">Download Resume</a>
             <a class="btn btn-secondary" href="https://github.com/anubhav-product" target="_blank" rel="noopener">GitHub</a>
-            <a class="btn btn-ghost" href="https://linkedin.com/in/anubhav-verma" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/anubhav-verma-746740250/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
         <div class="hero-card" aria-label="Summary card">
@@ -54,6 +54,26 @@
             <span><strong>Location:</strong> Remote / India</span>
             <span><strong>Open to:</strong> PM, APM, AI Product Manager roles</span>
             <span><strong>Experience:</strong> Shipped 2+ AI products end-to-end</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Stats Section -->
+    <section class="section stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card scale-in stagger-1">
+            <div class="stat-number" data-target="2">0</div>
+            <div class="stat-label">AI Products Shipped</div>
+          </div>
+          <div class="stat-card scale-in stagger-2">
+            <div class="stat-number" data-target="10">0</div>
+            <div class="stat-label">Product Frameworks Used</div>
+          </div>
+          <div class="stat-card scale-in stagger-3">
+            <div class="stat-number" data-target="100">0</div>
+            <div class="stat-label">% Decision-Driven</div>
           </div>
         </div>
       </div>
@@ -292,9 +312,9 @@
         </div>
         <div class="contact-card scale-in">
           <p><strong>Email:</strong> <a href="mailto:vermaanubhav28@gmail.com">vermaanubhav28@gmail.com</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/anubhav-verma" target="_blank" rel="noopener">linkedin.com/in/anubhav-verma</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/anubhav-verma-746740250/" target="_blank" rel="noopener">linkedin.com/in/anubhav-verma-746740250</a></p>
           <p><strong>GitHub:</strong> <a href="https://github.com/anubhav-product" target="_blank" rel="noopener">github.com/anubhav-product</a></p>
-          <p><strong>Resume:</strong> <a href="https://anubhavproduct.pythonanywhere.com/" target="_blank" rel="noopener">View Resume</a></p>
+          <p><strong>Resume:</strong> <a href="{{ url_for('static', filename='resume/resume.pdf') }}" target="_blank" rel="noopener">View Resume</a></p>
         </div>
       </div>
     </section>
@@ -310,6 +330,9 @@
   <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
     ↑
   </button>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <script>
     // Scroll-triggered animations
@@ -330,6 +353,39 @@
     document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in').forEach(el => {
       observer.observe(el);
     });
+
+    // Animated counters for stats
+    let countersAnimated = false;
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !countersAnimated) {
+          countersAnimated = true;
+          const counters = document.querySelectorAll('.stat-number');
+          counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const updateCounter = () => {
+              current += increment;
+              if (current < target) {
+                counter.textContent = Math.floor(current);
+                requestAnimationFrame(updateCounter);
+              } else {
+                counter.textContent = target;
+              }
+            };
+            updateCounter();
+          });
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection) {
+      statsObserver.observe(statsSection);
+    }
 
     // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -355,6 +411,81 @@
 
     scrollBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Scroll progress indicator
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('scrollProgress').style.width = scrolled + '%';
+    });
+
+    // Typing animation for hero subtitle
+    const texts = [
+      'Product Manager | AI & Decision-Support Products',
+      '0-to-1 Product Builder',
+      'Shipped 2+ AI Products End-to-End'
+    ];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typedElement = document.getElementById('typed-text');
+    
+    function typeText() {
+      const currentText = texts[textIndex];
+      
+      if (isDeleting) {
+        typedElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typedElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+      }
+      
+      let typeSpeed = isDeleting ? 50 : 100;
+      
+      if (!isDeleting && charIndex === currentText.length) {
+        typeSpeed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        typeSpeed = 500;
+      }
+      
+      setTimeout(typeText, typeSpeed);
+    }
+    
+    // Start typing animation after a short delay
+    setTimeout(typeText, 1000);
+
+    // Add hover effect for cards
+    document.querySelectorAll('.card, .skill-card, .thinking-card, .presence-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-12px) scale(1.02)';
+      });
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = '';
+      });
+    });
+
+    // Add ripple effect to buttons
+    document.querySelectorAll('.btn').forEach(button => {
+      button.addEventListener('click', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => ripple.remove(), 600);
+      });
     });
   </script>
 </body>

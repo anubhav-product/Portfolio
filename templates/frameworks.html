@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+
+{% block title %}Product Frameworks - Anubhav Verma{% endblock %}
+{% block description %}How I approach product decisions: frameworks, methodologies, and structured thinking{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h3>My Product Frameworks</h3>
+      <p>Structured approaches I use to navigate ambiguity, prioritize features, and make defensible product decisions.</p>
+    </div>
+
+    <!-- Framework: Problem Framing Canvas -->
+    <div class="framework-section fade-in">
+      <div class="framework-header">
+        <h4>🎯 Problem Framing Canvas</h4>
+        <p class="framework-subtitle">How I validate whether a problem is worth solving</p>
+      </div>
+      <div class="framework-grid">
+        <div class="framework-box">
+          <h5>1. Problem Statement</h5>
+          <p>Who experiences this? What exactly is broken? When/where does it happen?</p>
+          <span class="framework-example">Example: "PMs spend 3+ hours manually analyzing product decisions without structured frameworks"</span>
+        </div>
+        <div class="framework-box">
+          <h5>2. Impact Assessment</h5>
+          <p>How many users? How often? What's the cost of inaction?</p>
+          <span class="framework-example">Quantify: frequency, severity, market size</span>
+        </div>
+        <div class="framework-box">
+          <h5>3. Root Cause</h5>
+          <p>Why does this problem exist? 5 Whys analysis.</p>
+          <span class="framework-example">Surface systemic issues, not symptoms</span>
+        </div>
+        <div class="framework-box">
+          <h5>4. Success Criteria</h5>
+          <p>How will we know it's solved? Define measurable outcomes.</p>
+          <span class="framework-example">Leading indicators + lagging metrics</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Framework: Feature Prioritization Matrix -->
+    <div class="framework-section fade-in">
+      <div class="framework-header">
+        <h4>⚖️ Feature Prioritization: RICE + Trust</h4>
+        <p class="framework-subtitle">Modified RICE framework with AI-specific trust dimension</p>
+      </div>
+      <div class="prioritization-table">
+        <table class="framework-table">
+          <thead>
+            <tr>
+              <th>Factor</th>
+              <th>What I Evaluate</th>
+              <th>Score (1-10)</th>
+              <th>AI-Specific Considerations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Reach</strong></td>
+              <td>How many users affected per period?</td>
+              <td>% of user base</td>
+              <td>Consider both direct users and downstream impact</td>
+            </tr>
+            <tr>
+              <td><strong>Impact</strong></td>
+              <td>How much does it improve their experience?</td>
+              <td>Massive (3) → Minimal (0.25)</td>
+              <td>Does it increase or decrease user agency?</td>
+            </tr>
+            <tr>
+              <td><strong>Confidence</strong></td>
+              <td>How confident am I in estimates?</td>
+              <td>High (100%) → Low (50%)</td>
+              <td>For AI: Model reliability, edge case coverage</td>
+            </tr>
+            <tr>
+              <td><strong>Effort</strong></td>
+              <td>Person-months required</td>
+              <td>Total team effort</td>
+              <td>Include model training, testing, monitoring setup</td>
+            </tr>
+            <tr class="trust-row">
+              <td><strong>Trust</strong></td>
+              <td>Does this increase user trust in AI?</td>
+              <td>10 (explainable) → 1 (black box)</td>
+              <td><em>My addition:</em> Penalize opaque automation</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="formula-box">
+          <strong>Priority Score:</strong> (Reach × Impact × Confidence × Trust) / Effort
+        </div>
+      </div>
+    </div>
+
+    <!-- Framework: AI Product Decision Tree -->
+    <div class="framework-section fade-in">
+      <div class="framework-header">
+        <h4>🤖 AI Product Decision Tree</h4>
+        <p class="framework-subtitle">When to build AI features vs. rule-based solutions</p>
+      </div>
+      <div class="decision-tree">
+        <div class="decision-node">
+          <div class="decision-question">Is the problem well-defined with clear rules?</div>
+          <div class="decision-branches">
+            <div class="branch">
+              <span class="branch-label yes">YES</span>
+              <div class="branch-outcome">→ Use rule-based logic (faster, more reliable)</div>
+            </div>
+            <div class="branch">
+              <span class="branch-label no">NO</span>
+              <div class="next-question">Does it require pattern recognition or language understanding?</div>
+            </div>
+          </div>
+        </div>
+        <div class="decision-node">
+          <div class="decision-question">Can users verify/correct AI outputs easily?</div>
+          <div class="decision-branches">
+            <div class="branch">
+              <span class="branch-label yes">YES</span>
+              <div class="next-question">Is explainability critical for trust?</div>
+            </div>
+            <div class="branch">
+              <span class="branch-label no">NO</span>
+              <div class="branch-outcome warning">⚠️ High risk — require human review</div>
+            </div>
+          </div>
+        </div>
+        <div class="decision-criteria">
+          <h5>My AI Feature Checklist:</h5>
+          <ul>
+            <li>✅ Can we explain why the AI made this recommendation?</li>
+            <li>✅ Does it augment human judgment, not replace it?</li>
+            <li>✅ Can we measure accuracy and monitor drift?</li>
+            <li>✅ Is there a fallback when AI fails?</li>
+            <li>✅ Does it respect user agency and data privacy?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sample Product Teardown -->
+    <div class="framework-section fade-in">
+      <div class="framework-header">
+        <h4>🔍 Product Analysis Sample: Grammarly</h4>
+        <p class="framework-subtitle">Showing how I analyze products using structured frameworks</p>
+      </div>
+      <div class="teardown-grid">
+        <div class="teardown-card">
+          <h5>Problem It Solves</h5>
+          <p><strong>User Pain:</strong> Writing clarity and grammar errors hurt professional credibility.</p>
+          <p><strong>Why it matters:</strong> 73% of employers reject candidates for poor writing (LinkedIn study).</p>
+        </div>
+        <div class="teardown-card">
+          <h5>What Makes It Work</h5>
+          <ul>
+            <li><strong>Inline feedback:</strong> Real-time suggestions without breaking flow</li>
+            <li><strong>Explainability:</strong> Shows <em>why</em> a suggestion matters</li>
+            <li><strong>User control:</strong> Accept/reject each suggestion individually</li>
+            <li><strong>Freemium model:</strong> Free tier builds trust, premium adds value</li>
+          </ul>
+        </div>
+        <div class="teardown-card">
+          <h5>Strategic Risks</h5>
+          <ul>
+            <li>Over-reliance on AI → users lose writing skills</li>
+            <li>Privacy concerns with document analysis</li>
+            <li>Competitor pressure (Microsoft Editor, Notion AI)</li>
+            <li>Tone suggestions risk feeling prescriptive</li>
+          </ul>
+        </div>
+        <div class="teardown-card">
+          <h5>What I'd Improve</h5>
+          <p><strong>Opportunity:</strong> Add "writing patterns" dashboard showing user's common mistakes over time.</p>
+          <p><strong>Why:</strong> Shifts from reactive correction to proactive learning. Increases retention by making users better writers, not just dependent on AI.</p>
+          <p><strong>Metric to track:</strong> % of users showing error reduction over 30 days.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Principles -->
+    <div class="framework-section fade-in">
+      <div class="principles-banner">
+        <h4>Core Product Principles</h4>
+        <div class="principles-grid">
+          <div class="principle-item">
+            <span class="principle-number">1</span>
+            <div>
+              <h5>Start with "Why"</h5>
+              <p>Validate the problem before designing solutions</p>
+            </div>
+          </div>
+          <div class="principle-item">
+            <span class="principle-number">2</span>
+            <div>
+              <h5>Make Tradeoffs Explicit</h5>
+              <p>Every feature decision has costs — name them</p>
+            </div>
+          </div>
+          <div class="principle-item">
+            <span class="principle-number">3</span>
+            <div>
+              <h5>Metrics as Signals, Not Goals</h5>
+              <p>Goodhart's Law: optimized metrics lose meaning</p>
+            </div>
+          </div>
+          <div class="principle-item">
+            <span class="principle-number">4</span>
+            <div>
+              <h5>User Agency Over Automation</h5>
+              <p>AI should augment decisions, not make them</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

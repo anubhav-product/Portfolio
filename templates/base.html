@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Anubhav Verma | Product Manager{% endblock %}</title>
+  <meta name="description" content="{% block description %}Early-career Product Manager building AI-powered decision-support products.{% endblock %}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="logo" href="{{ url_for('home') }}" aria-label="Homepage">ANUBHAV</a>
+      <div class="nav-links">
+        <a href="{{ url_for('projects') }}" {% if request.endpoint == 'projects' %}class="active"{% endif %}>Projects</a>
+        <a href="{{ url_for('product_thinking') }}" {% if request.endpoint == 'product_thinking' %}class="active"{% endif %}>Thinking</a>
+        <a href="{{ url_for('frameworks') }}" {% if request.endpoint == 'frameworks' %}class="active"{% endif %}>Frameworks</a>
+        <a href="{{ url_for('skills') }}" {% if request.endpoint == 'skills' %}class="active"{% endif %}>Skills</a>
+        <a href="{{ url_for('contact') }}" {% if request.endpoint == 'contact' %}class="active"{% endif %}>Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Anubhav Verma. Built for clarity, not clutter.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    ↑
+  </button>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <script>
+    // Smooth instant page transitions
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('.nav-links a, .logo');
+      
+      links.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const href = link.href;
+          
+          document.body.classList.add('page-exit');
+          
+          setTimeout(() => {
+            window.location.href = href;
+          }, 300);
+        });
+      });
+    });
+
+    // Scroll progress indicator
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('scrollProgress').style.width = scrolled + '%';
+    });
+
+    // Scroll to top button
+    const scrollBtn = document.getElementById('scrollToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        scrollBtn.classList.add('visible');
+      } else {
+        scrollBtn.classList.remove('visible');
+      }
+    });
+
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Scroll-triggered animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+  {% block page_scripts %}{% endblock %}
+</body>
+</html>

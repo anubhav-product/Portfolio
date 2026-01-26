@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Anubhav Verma{% endblock %}
+{% block description %}Get in touch for PM roles and AI product collaborations{% endblock %}
+
+{% block content %}
+<section class="section contact-hero">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h3>Let's Build Something Together</h3>
+      <p class="contact-tagline">Open to Product Manager, APM, and AI Product Manager roles where I can drive 0-to-1 product development.</p>
+    </div>
+    
+    <div class="contact-grid">
+      <div class="contact-main fade-in">
+        <div class="contact-card scale-in">
+          <h4>Get in Touch</h4>
+          <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:vermaanubhav28@gmail.com">vermaanubhav28@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">💼</span>
+            <div>
+              <strong>LinkedIn</strong>
+              <a href="https://www.linkedin.com/in/anubhav-verma-746740250/" target="_blank" rel="noopener">linkedin.com/in/anubhav-verma-746740250</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">💻</span>
+            <div>
+              <strong>GitHub</strong>
+              <a href="https://github.com/anubhav-product" target="_blank" rel="noopener">github.com/anubhav-product</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📄</span>
+            <div>
+              <strong>Resume</strong>
+              <a href="{{ url_for('static', filename='resume/resume.pdf') }}" target="_blank" rel="noopener">View Resume (PDF)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-sidebar">
+        <div class="cta-card scale-in stagger-1">
+          <h4>What I'm Looking For</h4>
+          <ul>
+            <li>Product Manager or APM roles at AI-first companies</li>
+            <li>0-to-1 product development opportunities</li>
+            <li>Teams building decision-support or workflow automation products</li>
+            <li>Remote-friendly or hybrid roles (India timezone)</li>
+          </ul>
+        </div>
+        
+        <div class="cta-card scale-in stagger-2">
+          <h4>Why Work With Me?</h4>
+          <ul>
+            <li>Engineering background (B.E. Chemical, BITS Goa) + Product training (Duke, McKinsey)</li>
+            <li>Shipped 2 AI products end-to-end independently</li>
+            <li>Strong technical fluency (Python, APIs, system design)</li>
+            <li>Data-driven with frameworks for ambiguous problems</li>
+            <li>Focused on responsible AI and user trust</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
