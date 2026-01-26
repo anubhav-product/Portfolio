@@ -37,8 +37,8 @@
           </p>
           <div class="button-row">
             <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-secondary" href="{{ url_for('static', filename='resume/resume.pdf') }}" download="Anubhav_Verma_Resume.pdf">Download Resume</a>
             <a class="btn btn-secondary" href="https://github.com/anubhav-product" target="_blank" rel="noopener">GitHub</a>
-            <a class="btn btn-secondary" href="https://anubhavproduct.pythonanywhere.com/" target="_blank" rel="noopener">View Resume</a>
             <a class="btn btn-ghost" href="https://linkedin.com/in/anubhav-verma" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
@@ -61,13 +61,13 @@
 
     <section id="projects" class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header fade-in">
           <h3>Featured Projects</h3>
           <p>Products that show end-to-end thinking from problem framing to shipped outcomes.</p>
         </div>
 
         <div class="cards">
-          <article class="card">
+          <article class="card fade-in stagger-1">
             <header>
               <h4>Product Playground</h4>
               <p class="subtitle">AI-powered product strategy &amp; analytics platform for Product Managers.</p>
@@ -88,7 +88,7 @@
             </footer>
           </article>
 
-          <article class="card">
+          <article class="card fade-in stagger-2">
             <header>
               <h4>AI Interview &amp; Resume Screening Copilot</h4>
               <p class="subtitle">Resume–JD analysis and career decision-support platform.</p>
@@ -116,12 +116,12 @@
     <!-- PRODUCT THINKING & DECISIONS -->
     <section id="product-thinking" class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header fade-in">
           <h3>Product Thinking in Action</h3>
           <p>Real decisions and tradeoffs from building AI products.</p>
         </div>
         <div class="thinking-grid">
-          <div class="thinking-card">
+          <div class="thinking-card slide-in-left stagger-1">
             <h4>🎯 Decision: No Hiring Scores in Resume Copilot</h4>
             <p class="thinking-context"><strong>Context:</strong> Hiring AI tools often provide numeric "fit scores" (e.g., 72% match).</p>
             <p><strong>Decision made:</strong> Avoided all numeric scoring. Used qualitative indicators (Strong/Developing/Early) with explanations.</p>
@@ -136,7 +136,7 @@
             <p class="thinking-outcome"><strong>Outcome:</strong> Higher trust, explainability, and responsible AI design.</p>
           </div>
 
-          <div class="thinking-card">
+          <div class="thinking-card scale-in stagger-2">
             <h4>⚖️ Tradeoff: Automation vs. Human Judgment</h4>
             <p class="thinking-context"><strong>Context:</strong> Could have built automated hire/reject recommendations.</p>
             <p><strong>Decision made:</strong> Designed as decision-support tool, not automation. AI supports—doesn't replace—human judgment.</p>
@@ -186,13 +186,13 @@
 
     <section id="skills" class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header fade-in">
           <h3>Skills</h3>
           <p>Focused capabilities relevant to product roles and AI-driven products.</p>
         </div>
 
         <div class="skill-grid">
-          <div class="skill-card">
+          <div class="skill-card fade-in stagger-1">
             <h4>Product Strategy &amp; Execution</h4>
             <ul>
               <li>Product vision, strategy, and roadmapping</li>
@@ -206,7 +206,7 @@
             </ul>
           </div>
 
-          <div class="skill-card">
+          <div class="skill-card fade-in stagger-2">
             <h4>AI &amp; Technical Capabilities</h4>
             <ul>
               <li>AI/ML product development lifecycle</li>
@@ -220,7 +220,7 @@
             </ul>
           </div>
 
-          <div class="skill-card">
+          <div class="skill-card fade-in stagger-3">
             <h4>Stakeholder &amp; Analytics</h4>
             <ul>
               <li>KPI diagnostics &amp; metrics definition</li>
@@ -234,7 +234,7 @@
             </ul>
           </div>
 
-          <div class="skill-card">
+          <div class="skill-card fade-in stagger-4">
             <h4>Tools &amp; Platforms</h4>
             <ul>
               <li>Jira, Linear (project management)</li>
@@ -247,7 +247,7 @@
               <li>Excel, Google Sheets (data analysis)</li>
             </ul>
           </div>
-          <div class="skill-card">
+          <div class="skill-card fade-in stagger-5">
             <h4>Learning &amp; Credentials</h4>
             <ul>
               <li>AI Product Management — Duke University (Coursera) <span class="tag">In Progress</span></li>
@@ -263,20 +263,20 @@
 
     <section id="presence" class="section section-alt">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header fade-in">
           <h3>Online Presence</h3>
           <p>Live projects and professional profiles.</p>
         </div>
         <div class="presence-grid">
-          <a class="presence-card" href="https://anubhavproduct.pythonanywhere.com/" aria-label="Resume website" target="_blank" rel="noopener">
+          <a class="presence-card scale-in stagger-1" href="https://anubhavproduct.pythonanywhere.com/" aria-label="Resume website" target="_blank" rel="noopener">
             <h4>Resume</h4>
             <p>anubhavproduct.pythonanywhere.com</p>
           </a>
-          <a class="presence-card" href="https://github.com/anubhav-product/ProductPlayGround" aria-label="Product Playground project" target="_blank" rel="noopener">
+          <a class="presence-card scale-in stagger-2" href="https://github.com/anubhav-product/ProductPlayGround" aria-label="Product Playground project" target="_blank" rel="noopener">
             <h4>Product Playground</h4>
             <p>AI Product Strategy Platform</p>
           </a>
-          <a class="presence-card" href="https://github.com/anubhav-product/ai-interview-resume-copilot" aria-label="AI Interview Copilot project" target="_blank" rel="noopener">
+          <a class="presence-card scale-in stagger-3" href="https://github.com/anubhav-product/ai-interview-resume-copilot" aria-label="AI Interview Copilot project" target="_blank" rel="noopener">
             <h4>AI Interview Copilot</h4>
             <p>Resume Screening Platform</p>
           </a>
@@ -286,11 +286,11 @@
 
     <section id="contact" class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header fade-in">
           <h3>Contact</h3>
           <p>Open to PM roles and collaborations in AI product development.</p>
         </div>
-        <div class="contact-card">
+        <div class="contact-card scale-in">
           <p><strong>Email:</strong> <a href="mailto:vermaanubhav28@gmail.com">vermaanubhav28@gmail.com</a></p>
           <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/anubhav-verma" target="_blank" rel="noopener">linkedin.com/in/anubhav-verma</a></p>
           <p><strong>GitHub:</strong> <a href="https://github.com/anubhav-product" target="_blank" rel="noopener">github.com/anubhav-product</a></p>
@@ -305,5 +305,57 @@
       <p>© 2026 Anubhav Verma. Built for clarity, not clutter.</p>
     </div>
   </footer>
+
+  <!-- Scroll to top button -->
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    ↑
+  </button>
+
+  <script>
+    // Scroll-triggered animations
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animated elements
+    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Scroll to top button
+    const scrollBtn = document.getElementById('scrollToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        scrollBtn.classList.add('visible');
+      } else {
+        scrollBtn.classList.remove('visible');
+      }
+    });
+
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
