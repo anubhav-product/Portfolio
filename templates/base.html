@@ -42,7 +42,8 @@
       </button>
       <div class="nav-links">
         <a href="{{ url_for('projects') }}" {% if request.endpoint == 'projects' %}class="active"{% endif %}>Projects</a>
-        <a href="{{ url_for('product_thinking') }}" {% if request.endpoint == 'product_thinking' %}class="active"{% endif %}>Thinking</a>
+        <a href="{{ url_for('case_study') }}" {% if request.endpoint == 'case_study' %}class="active"{% endif %}>Case Study</a>
+        <a href="{{ url_for('product_thinking') }}" {% if request.endpoint == 'product_thinking' %}class="active"{% endif %}>Product Thinking</a>
         <a href="{{ url_for('frameworks') }}" {% if request.endpoint == 'frameworks' %}class="active"{% endif %}>Frameworks</a>
         <a href="{{ url_for('teardowns') }}" {% if request.endpoint == 'teardowns' %}class="active"{% endif %}>Teardowns</a>
         <a href="{{ url_for('skills') }}" {% if request.endpoint == 'skills' %}class="active"{% endif %}>Skills</a>
@@ -78,6 +79,36 @@
     </svg>
     Resume
   </a>
+
+  <!-- Mobile bottom navigation -->
+  <nav class="mobile-bottom-nav">
+    <a href="{{ url_for('home') }}" class="mobile-nav-item {% if request.endpoint == 'home' %}active{% endif %}">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="{{ url_for('projects') }}" class="mobile-nav-item {% if request.endpoint == 'projects' or request.endpoint == 'case_study' %}active{% endif %}">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Projects</span>
+    </a>
+    <a href="{{ url_for('product_thinking') }}" class="mobile-nav-item {% if request.endpoint == 'product_thinking' or request.endpoint == 'frameworks' or request.endpoint == 'teardowns' %}active{% endif %}">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Thinking</span>
+    </a>
+    <a href="{{ url_for('contact') }}" class="mobile-nav-item {% if request.endpoint == 'contact' %}active{% endif %}">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Contact</span>
+    </a>
+  </nav>
 
   <!-- Scroll progress bar -->
   <div class="scroll-progress" id="scrollProgress"></div>
