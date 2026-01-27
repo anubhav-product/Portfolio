@@ -42,7 +42,6 @@
       </button>
       <div class="nav-links">
         <a href="{{ url_for('projects') }}" {% if request.endpoint == 'projects' %}class="active"{% endif %}>Projects</a>
-        <a href="{{ url_for('case_study') }}" {% if request.endpoint == 'case_study' %}class="active"{% endif %}>Case Study</a>
         <a href="{{ url_for('product_thinking') }}" {% if request.endpoint == 'product_thinking' %}class="active"{% endif %}>Product Thinking</a>
         <a href="{{ url_for('frameworks') }}" {% if request.endpoint == 'frameworks' %}class="active"{% endif %}>Frameworks</a>
         <a href="{{ url_for('teardowns') }}" {% if request.endpoint == 'teardowns' %}class="active"{% endif %}>Teardowns</a>
