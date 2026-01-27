@@ -35,6 +35,11 @@
   <header class="site-header">
     <nav class="container nav">
       <a class="logo" href="{{ url_for('home') }}" aria-label="Homepage">ANUBHAV</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <div class="nav-links">
         <a href="{{ url_for('projects') }}" {% if request.endpoint == 'projects' %}class="active"{% endif %}>Projects</a>
         <a href="{{ url_for('product_thinking') }}" {% if request.endpoint == 'product_thinking' %}class="active"{% endif %}>Thinking</a>
@@ -78,8 +83,30 @@
   <div class="scroll-progress" id="scrollProgress"></div>
 
   <script>
-    // Smooth instant page transitions
+    // Mobile menu toggle
     document.addEventListener('DOMContentLoaded', () => {
+      const mobileToggle = document.querySelector('.mobile-menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      
+      if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+          const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+          mobileToggle.setAttribute('aria-expanded', !isExpanded);
+          mobileToggle.classList.toggle('active');
+          navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+      
+      // Smooth instant page transitions
       const links = document.querySelectorAll('.nav-links a, .logo');
       
       links.forEach(link => {

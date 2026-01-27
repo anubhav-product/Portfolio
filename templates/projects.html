@@ -108,22 +108,18 @@
 <section class="section section-alt">
   <div class="container">
     <div class="section-header fade-in">
-      <h3>Online Presence</h3>
-      <p>Live projects and professional profiles.</p>
+      <h3>Connect With Me</h3>
+      <p>Ready to discuss product opportunities or collaborate on AI products.</p>
     </div>
-    <div class="presence-grid">
-      <a class="presence-card scale-in stagger-1" href="https://anubhavproduct.pythonanywhere.com/" aria-label="Resume website" target="_blank" rel="noopener">
-        <h4>Resume</h4>
-        <p>anubhavproduct.pythonanywhere.com</p>
-      </a>
-      <a class="presence-card scale-in stagger-2" href="https://github.com/anubhav-product/ProductPlayGround" aria-label="Product Playground project" target="_blank" rel="noopener">
-        <h4>Product Playground</h4>
-        <p>AI Product Strategy Platform</p>
-      </a>
-      <a class="presence-card scale-in stagger-3" href="https://github.com/anubhav-product/ai-interview-resume-copilot" aria-label="AI Interview Copilot project" target="_blank" rel="noopener">
-        <h4>AI Interview Copilot</h4>
-        <p>Resume Screening Platform</p>
-      </a>
+    <div class="cta-banner fade-in" style="margin-top: 40px;">
+      <div class="cta-content">
+        <h3>Let's Build Something Together</h3>
+        <p>Open to Product Manager, APM, and AI Product Manager roles. Available immediately.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">Get in Touch</a>
+        <a href="{{ url_for('static', filename='resume/resume.pdf') }}" class="btn btn-secondary" download target="_blank">Download Resume</a>
+      </div>
     </div>
   </div>
 </section>
