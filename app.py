@@ -39,6 +39,11 @@ def case_study():
     return render_template("case_study.html")
 
 
+@app.route("/case-study-copilot")
+def case_study_copilot():
+    return render_template("case_study_copilot.html")
+
+
 @app.route("/teardowns")
 def teardowns():
     return render_template("teardowns.html")

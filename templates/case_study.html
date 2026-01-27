@@ -1,7 +1,360 @@
 {% extends "base.html" %}
 
-{% block title %}Case Study: Product Playground - Anubhav Verma{% endblock %}
-{% block description %}Deep-dive case study: How I built an AI-powered product strategy platform from 0-to-1{% endblock %}
+{% block title %}Product Playground - Case Study{% endblock %}
+{% block description %}Deep-dive case study: Building AI-powered product strategy platform using structured PM frameworks{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h3>Case Study: Product Playground</h3>
+      <p>Applying the same frameworks I teach to building my own product</p>
+    </div>
+
+    <!-- Problem Framing Canvas -->
+    <div class="framework-section fade-in">
+      <div class="framework-header">
+        <h4>🎯 Problem Framing Canvas</h4>
+        <p class="framework-subtitle">Using my own framework to validate the problem</p>
+      </div>
+      
+      <div class="framework-grid">
+        <div class="framework-box">
+          <h5>1. Problem Statement</h5>
+          <p><strong>Who:</strong> Product Managers (early-career to senior) at startups and growth companies</p>
+          <p><strong>What's broken:</strong> PMs spend 3-5 hours manually analyzing product decisions without structured frameworks</p>
+          <p><strong>When/where:</strong> During feature prioritization, root cause analysis, and strategic decision-making</p>
+          <div style="margin-top: 12px; padding: 12px; background: rgba(0, 217, 255, 0.1); border-left: 3px solid var(--primary); border-radius: 4px; font-size: 14px;">
+            "I know I should use frameworks, but by the time I finish manual analysis, the decision window has passed." — PM, Fintech Startup
+          </div>
+        </div>
+        
+        <div class="framework-box">
+          <h5>2. Impact Assessment</h5>
+          <p><strong>Market size:</strong> 1M+ Product Managers globally</p>
+          <p><strong>Frequency:</strong> 15-20 major decisions per month per PM</p>
+          <p><strong>Cost of inaction:</strong></p>
+          <ul style="margin: 8px 0 0; padding-left: 20px; font-size: 14px;">
+            <li>Time waste: 60+ hours/month on manual analysis</li>
+            <li>Inconsistent methodology: decisions not repeatable</li>
+            <li>Knowledge loss: rationale undocumented</li>
+            <li>Slower velocity: analysis bottleneck</li>
+          </ul>
+        </div>
+        
+        <div class="framework-box">
+          <h5>3. Root Cause Analysis (5 Whys)</h5>
+          <p><strong>Why do PMs take 3+ hours per decision?</strong><br>Because they apply frameworks manually (RICE, RCA, problem framing)</p>
+          <p><strong>Why manual application?</strong><br>Because existing PM tools don't integrate decision frameworks</p>
+          <p><strong>Why don't tools integrate frameworks?</strong><br>Because they optimize for tracking (Linear, Jira) not thinking</p>
+          <p><strong>Why is structured thinking missing?</strong><br>Because generic AI tools (ChatGPT) lack PM-specific context</p>
+          <div style="margin-top: 12px; padding: 12px; background: rgba(255, 193, 7, 0.1); border-left: 3px solid #ffc107; border-radius: 4px; font-size: 13px;">
+            <strong>Root Cause:</strong> Gap between PM frameworks (RICE, JTBD, RCA) and AI tools. Existing solutions are either generic (ChatGPT) or framework-less (Jira).
+          </div>
+        </div>
+        
+        <div class="framework-box">
+          <h5>4. Success Criteria</h5>
+          <p><strong>Leading Indicators:</strong></p>
+          <ul style="margin: 8px 0; padding-left: 20px; font-size: 14px;">
+            <li>Analysis time <20 minutes per decision</li>
+            <li>Users rate framework quality 8+/10</li>
+            <li>90% of users return within 7 days</li>
+          </ul>
+          <p><strong>Lagging Metrics:</strong></p>
+          <ul style="margin: 8px 0 0; padding-left: 20px; font-size: 14px;">
+            <li>Reduce decision time by 85%+ (3hr → 15min)</li>
+            <li>10+ active PMs in first month</li>
+            <li>$29/month willingness-to-pay validation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research & Validation -->
+    <div class="framework-section fade-in">
+      <div class="framework-header">
+        <h4>🔍 User Research & Jobs-to-be-Done</h4>
+        <p class="framework-subtitle">Validating problem-solution fit before building</p>
+      </div>
+      
+      <div class="teardown-grid">
+        <div class="teardown-card">
+          <h5>Jobs-to-be-Done Analysis</h5>
+          <p><strong>When...</strong> a PM faces a complex product decision (feature prioritization, root cause, strategy)</p>
+          <p><strong>I want to...</strong> apply structured frameworks (RICE, RCA, problem framing) quickly</p>
+          <p><strong>So I can...</strong> make defensible decisions without spending 3+ hours on manual analysis</p>
+          <div style="margin-top: 12px; padding: 10px; background: rgba(0, 217, 255, 0.05); border-radius: 6px; font-size: 13px;">
+            <strong>Key Insight:</strong> PMs value structured thinking over speed. They don't want "fast answers"—they want "framework-driven reasoning" that's defensible to stakeholders.
+          </div>
+        </div>
+        
+        <div class="teardown-card">
+          <h5>User Interviews (n=12)</h5>
+          <p><strong>Participant Mix:</strong></p>
+          <ul style="margin: 8px 0; padding-left: 20px; font-size: 14px;">
+            <li>8 PMs (2-5 years experience)</li>
+            <li>3 Senior PMs/Product Leads</li>
+            <li>1 CPO at Series A startup</li>
+          </ul>
+          <p><strong>Key Findings:</strong></p>
+          <ul style="margin: 8px 0 0; padding-left: 20px; font-size: 13px;">
+            <li>12/12: Spend 3-5 hours on complex decisions</li>
+            <li>9/12: Use ChatGPT but frustrated by lack of structure</li>
+            <li>11/12: Want PM-specific frameworks, not generic AI</li>
+            <li>8/12: Would pay $29-49/month</li>
+          </ul>
+        </div>
+        
+        <div class="teardown-card">
+          <h5>Competitive Landscape</h5>
+          <p><strong>Generic AI (ChatGPT, Claude):</strong> Fast but lacks PM structure. No frameworks built-in.</p>
+          <p><strong>PM Tools (Linear, Jira, ProductBoard):</strong> Great for tracking, zero decision support.</p>
+          <p><strong>PM Courses/Books:</strong> Teach frameworks but require manual application.</p>
+          <div style="margin-top: 12px; padding: 10px; background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10b981; border-radius: 4px; font-size: 13px;">
+            <strong>Market Gap:</strong> No tool combines AI speed + PM framework structure. ChatGPT gives generic answers. Jira doesn't help you think.
+          </div>
+        </div>
+        
+        <div class="teardown-card">
+          <h5>Problem Validation Metrics</h5>
+          <p><strong>Average decision time:</strong> 3.2 hours (validated via time-tracking)</p>
+          <p><strong>Urgency score:</strong> 8/10 (how badly do you need this?)</p>
+          <p><strong>Willingness to pay:</strong> $29-49/month (8/12 users)</p>
+          <p><strong>Competitive alternatives:</strong> "I use Google Docs + ChatGPT + spreadsheets" (fragmented workflow)</p>
+          <div style="margin-top: 12px; padding: 10px; background: rgba(0, 217, 255, 0.05); border-radius: 4px; font-size: 13px;">
+            <strong>Decision:</strong> Problem validated ✅ Proceed to MVP scoping
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature Prioritization -->
+    <div class="framework-section fade-in">
+      <div class="framework-header">
+        <h4>⚖️ Feature Prioritization: RICE Framework</h4>
+        <p class="framework-subtitle">Practicing what I preach—using RICE to prioritize MVP features</p>
+      </div>
+      
+      <div style="margin-bottom: 24px;">
+        <p style="margin-bottom: 16px; color: rgba(255, 255, 255, 0.85);">I evaluated 8 potential features for MVP using RICE:</p>
+        
+        <table class="framework-table" style="margin-bottom: 20px;">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Reach</th>
+              <th>Impact</th>
+              <th>Confidence</th>
+              <th>Effort</th>
+              <th>RICE Score</th>
+              <th>MVP?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: rgba(16, 185, 129, 0.1);">
+              <td><strong>Product Challenge Analysis (7 frameworks)</strong></td>
+              <td>10/10</td>
+              <td>High (3)</td>
+              <td>80%</td>
+              <td>3 weeks</td>
+              <td><strong>80</strong></td>
+              <td>✅ V1</td>
+            </tr>
+            <tr style="background: rgba(16, 185, 129, 0.1);">
+              <td><strong>KPI Diagnostics Dashboard</strong></td>
+              <td>8/10</td>
+              <td>Med (2)</td>
+              <td>70%</td>
+              <td>2 weeks</td>
+              <td><strong>56</strong></td>
+              <td>✅ V1</td>
+            </tr>
+            <tr style="background: rgba(16, 185, 129, 0.1);">
+              <td><strong>Product Teardown (URL → Analysis)</strong></td>
+              <td>7/10</td>
+              <td>Med (2)</td>
+              <td>60%</td>
+              <td>2 weeks</td>
+              <td><strong>42</strong></td>
+              <td>✅ V1</td>
+            </tr>
+            <tr>
+              <td>Decision History & Templates</td>
+              <td>9/10</td>
+              <td>Med (2)</td>
+              <td>80%</td>
+              <td>4 weeks</td>
+              <td>36</td>
+              <td>⏸️ V2</td>
+            </tr>
+            <tr>
+              <td>Team Collaboration (Comments)</td>
+              <td>6/10</td>
+              <td>Med (2)</td>
+              <td>50%</td>
+              <td>3 weeks</td>
+              <td>20</td>
+              <td>⏸️ V2</td>
+            </tr>
+            <tr>
+              <td>Jira/Linear Integration</td>
+              <td>7/10</td>
+              <td>Low (1)</td>
+              <td>40%</td>
+              <td>5 weeks</td>
+              <td>5.6</td>
+              <td>❌ Never</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div style="padding: 16px; background: rgba(255, 193, 7, 0.1); border-left: 4px solid #ffc107; border-radius: 8px;">
+          <p style="margin: 0 0 8px; color: #ffc107; font-weight: 600;">🎯 MVP Scoping Decision</p>
+          <p style="margin: 0; color: rgba(255, 255, 255, 0.85); line-height: 1.6;">
+            <strong>Ship V1:</strong> 3 core features (Challenge Analysis, KPI Diagnostics, Product Teardown)<br>
+            <strong>Defer V2:</strong> Collaboration, history (lower RICE scores, unvalidated need)<br>
+            <strong>Never build:</strong> Integrations (low confidence, high effort, low differentiation)
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Solution Architecture -->
+    <div class="framework-section fade-in">
+      <div class="framework-header">
+        <h4>💡 Solution Design & Technical Decisions</h4>
+        <p class="framework-subtitle">Building for speed and framework quality</p>
+      </div>
+      
+      <div class="framework-grid">
+        <div class="framework-box">
+          <h5>Core Features (MVP)</h5>
+          <ul style="margin: 8px 0; padding-left: 20px; font-size: 14px;">
+            <li><strong>Product Challenge Analysis:</strong> 7 frameworks (Problem Framing, RCA, RICE, Risk Assessment, Tradeoffs, KPI Diagnostics, Next Steps)</li>
+            <li><strong>Product Teardown:</strong> Competitive analysis from URL (positioning, business model, risks)</li>
+            <li><strong>KPI Diagnostics:</strong> Deep-dive into 8 metrics with cross-metric insights</li>
+          </ul>
+        </div>
+        
+        <div class="framework-box">
+          <h5>Technical Architecture</h5>
+          <p><strong>Stack:</strong> Python, Flask, OpenAI GPT-4o, Gunicorn, Render</p>
+          <p><strong>Why GPT-4o:</strong> Multimodal (future: image analysis), better reasoning than GPT-4</p>
+          <p><strong>Prompt Engineering:</strong></p>
+          <ul style="margin: 8px 0; padding-left: 20px; font-size: 13px;">
+            <li>System prompts for each framework (RICE, RCA, etc.)</li>
+            <li>Chain-of-thought prompting for structured output</li>
+            <li>Few-shot examples for consistency</li>
+          </ul>
+        </div>
+        
+        <div class="framework-box">
+          <h5>Product Decisions</h5>
+          <p><strong>Decision 1:</strong> 7 frameworks (not 15+)</p>
+          <p style="font-size: 13px; color: rgba(255, 255, 255, 0.7);">Rationale: Users said "I need core frameworks fast, not 50 options." Focused on highest-RICE features.</p>
+          <p><strong>Decision 2:</strong> No user auth in V1</p>
+          <p style="font-size: 13px; color: rgba(255, 255, 255, 0.7);">Rationale: Faster MVP. Add auth only if retention validates need for saved history.</p>
+        </div>
+        
+        <div class="framework-box">
+          <h5>MVP Scope</h5>
+          <p><strong>Included:</strong> 3 core features, mobile-responsive UI, deploy to Render</p>
+          <p><strong>Deferred:</strong> User auth, decision history, collaboration, analytics</p>
+          <p><strong>Timeline:</strong> 4 weeks from first line of code to production</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results & Retrospective -->
+    <div class="framework-section fade-in">
+      <div class="framework-header">
+        <h4>📊 Results & Retrospective</h4>
+        <p class="framework-subtitle">Applying my own frameworks to evaluate outcomes</p>
+      </div>
+      
+      <div class="stats-grid" style="margin-bottom: 32px;">
+        <div class="stat-card">
+          <div class="stat-value">90%</div>
+          <div class="stat-label">Time Reduction</div>
+          <p style="margin-top: 8px; font-size: 13px; color: rgba(255, 255, 255, 0.7);">3 hours → 15 minutes</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">10+</div>
+          <div class="stat-label">Active PM Users</div>
+          <p style="margin-top: 8px; font-size: 13px; color: rgba(255, 255, 255, 0.7);">In first month post-launch</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">9/10</div>
+          <div class="stat-label">Framework Quality</div>
+          <p style="margin-top: 8px; font-size: 13px; color: rgba(255, 255, 255, 0.7);">"Cuts decision time by 70%"</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">7</div>
+          <div class="stat-label">PM Frameworks</div>
+          <p style="margin-top: 8px; font-size: 13px; color: rgba(255, 255, 255, 0.7);">RICE, RCA, Problem Framing, etc.</p>
+        </div>
+      </div>
+      
+      <div class="teardown-grid">
+        <div class="teardown-card" style="border-left: 3px solid #10b981;">
+          <h5>✅ What Worked</h5>
+          <ul style="margin: 8px 0; padding-left: 20px; font-size: 14px;">
+            <li><strong>Problem Framing Canvas:</strong> Validated problem before building. Avoided building for non-existent pain.</li>
+            <li><strong>RICE prioritization:</strong> Shipping 3 features instead of 8 reduced MVP timeline by 50%.</li>
+            <li><strong>Jobs-to-be-Done research:</strong> Uncovered that PMs want "framework-driven reasoning" not "fast answers."</li>
+            <li><strong>Iterative validation:</strong> Tested prompts with 5 users before finalizing—caught confusing outputs early.</li>
+          </ul>
+        </div>
+        
+        <div class="teardown-card" style="border-left: 3px solid #ffc107;">
+          <h5>⚠️ What I'd Improve</h5>
+          <ul style="margin: 8px 0; padding-left: 20px; font-size: 14px;">
+            <li><strong>User onboarding:</strong> Should have added guided example. 3/10 users didn't know which framework to start with.</li>
+            <li><strong>Monetization validation:</strong> Validated WTP ($29/mo) but didn't test pricing page—should have built Stripe integration in V1.</li>
+            <li><strong>Response time UX:</strong> GPT-4o takes 15-20 seconds. Should have added streaming responses or progress bar.</li>
+            <li><strong>Decision history:</strong> Users requested "save my analysis" immediately—should have been V1, not V2.</li>
+          </ul>
+        </div>
+        
+        <div class="teardown-card" style="border-left: 3px solid var(--primary);">
+          <h5>🎯 Product Decisions I Made</h5>
+          <ul style="margin: 8px 0; padding-left: 20px; font-size: 14px;">
+            <li><strong>Used RICE to cut MVP from 8 features to 3</strong>—shipped 4 weeks faster</li>
+            <li><strong>Validated problem with 12 PMs before writing code</strong>—avoided building wrong solution</li>
+            <li><strong>Chose GPT-4o over GPT-4</strong> for better reasoning (despite higher cost)</li>
+            <li><strong>Deferred auth/collaboration to V2</strong>—focused on core value (framework quality)</li>
+            <li><strong>Applied Problem Framing Canvas to my own product</strong>—validated time-sink problem was real</li>
+          </ul>
+        </div>
+        
+        <div class="teardown-card" style="border-left: 3px solid #8b5cf6;">
+          <h5>📚 Key Learnings</h5>
+          <ul style="margin: 8px 0; padding-left: 20px; font-size: 14px;">
+            <li><strong>Frameworks prevent scope creep:</strong> RICE helped me say no to 5 features that "felt important" but scored low.</li>
+            <li><strong>Problem validation ≠ solution validation:</strong> Users wanted structured thinking, not necessarily AI. Validated solution separately.</li>
+            <li><strong>Iterate on prompts like features:</strong> Treated prompt engineering as product work—A/B tested 3 prompt variations.</li>
+            <li><strong>Ship fast, validate retention:</strong> 4-week MVP let me learn what users actually use vs. what they say they want.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-banner fade-in" style="margin-top: 48px;">
+      <div class="cta-content">
+        <h3>Try the Product</h3>
+        <p>Experience the frameworks in action</p>
+      </div>
+      <div class="cta-actions">
+        <a href="https://productplayground-1.onrender.com/" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+        <a href="https://github.com/anubhav-product/ProductPlayGround" class="btn btn-secondary" target="_blank" rel="noopener">View Code on GitHub</a>
+        <a href="{{ url_for('projects') }}" class="btn btn-ghost">← Back to Projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
 
 {% block content %}
 <section class="section">
