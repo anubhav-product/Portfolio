@@ -2153,6 +2153,75 @@ a, button, .card, .skill-card, .thinking-card, .presence-card {
   .hero h1 {
     font-size: 42px;
   }
+  
+  .hero h2 {
+    font-size: 18px;
+    line-height: 1.5;
+    min-height: 54px; /* Prevent layout shift during typing animation */
+  }
+  
+  .lead {
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 0 24px;
+  }
+  
+  /* Hero stats - mobile optimized */
+  .hero-stats {
+    margin: 20px 0 24px !important;
+  }
+  
+  .hero-stats > div {
+    padding: 12px 8px !important;
+  }
+  
+  .hero-stats > div > div:first-child {
+    font-size: 20px !important;
+  }
+  
+  .hero-stats > div > div:last-child {
+    font-size: 11px !important;
+  }
+  
+  /* Social links mobile */
+  .social-links {
+    justify-content: center !important;
+    margin-top: 12px !important;
+  }
+  
+  .social-links a {
+    font-size: 13px !important;
+  }
+  
+  /* Hero card mobile */
+  .hero-card {
+    padding: 24px 20px;
+    margin-top: 32px;
+  }
+  
+  .hero-card h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  
+  .hero-card ul li {
+    font-size: 14px;
+    padding: 8px 0;
+    padding-left: 24px;
+  }
+  
+  .hero-meta {
+    font-size: 13px;
+    gap: 8px;
+  }
+  
+  .currently-section h4 {
+    font-size: 14px !important;
+  }
+  
+  .currently-section ul li {
+    font-size: 13px !important;
+  }
 
   .hero-grid,
   .cards,
