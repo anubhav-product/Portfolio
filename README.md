@@ -26,7 +26,16 @@ This portfolio demonstrates full-stack product management through a modern, prod
 - Product principles and current availability status
 
 ### 💼 **Projects Page**
-- **Product Playground**: AI-powered product strategy platform (7+ frameworks, GPT-4o)
+- **Product Playground**: AI-powered decision toolkit (9 tools, GPT-4o)
+  - **Product Challenge Analysis:** AI-powered strategic recommendations with problem reframing & RCA
+  - **Dashboard KPI Diagnostics:** Deep dive into 8 core product metrics with insights
+  - **Product Teardown:** Comprehensive product & market analysis from any URL
+  - **Decision Framing Engine:** Clarify what decision is being made before analysis
+  - **Decision Dashboard:** Understand where things are going wrong and why it matters
+  - **Confidence Meter:** Assess whether there's enough signal to act
+  - **Decision Defense Pack:** Executive briefs and stakeholder communication
+  - **Decision Retrospective:** Capture learning after decisions to improve judgment
+  - **Guided Walkthrough:** 5-step framework for structured product thinking
   - Impact: 90% time reduction (3hr → 15min)
   - Validation: 10+ PMs tested, 8/10 urgency score
   - Tech: Python, Flask, OpenAI GPT-4o, Render
@@ -42,7 +51,8 @@ This portfolio demonstrates full-stack product management through a modern, prod
 ### 📖 **Case Studies** (Deep-Dive Analysis)
 - **Product Playground Case Study**: Applied Problem Framing Canvas, RICE prioritization, Jobs-to-be-Done
   - Shows framework application to validate problem before building
-  - RICE scores for 8 features → shipped top 3
+  - RICE scores for 8 features → shipped top 3 in MVP
+  - Product evolution from 3 to 9 tools based on user feedback
   - Retrospective using own frameworks
   
 - **AI Interview Copilot Case Study**: RICE + Trust framework, ethical design decisions
