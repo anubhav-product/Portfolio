@@ -6,12 +6,13 @@
 
 2. **Copy it to the portfolio folder**:
    ```bash
-   cp ~/Desktop/your-resume-name.pdf /workspaces/Portfolio/static/downloads/resume.pdf
+   cp ~/Desktop/your-resume-name.pdf /workspaces/Portfolio/static/resume/resume.pdf
+   cp ~/Desktop/your-strategy-resume-name.pdf /workspaces/Portfolio/static/resume/strategy_resume.pdf
    ```
 
-3. **Verify the file**:
+3. **Verify the files**:
    ```bash
-   ls -lh /workspaces/Portfolio/static/downloads/
+   ls -lh /workspaces/Portfolio/static/resume/
    ```
 
 4. **Restart the Flask server** (if it's running):

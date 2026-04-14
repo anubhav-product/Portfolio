@@ -66,7 +66,7 @@
     ↑
   </button>
 
-  <!-- Floating resume download button -->
+  <!-- Floating resume download buttons -->
   <a href="{{ url_for('static', filename='resume/resume.pdf') }}" 
      class="floating-resume-btn" 
      aria-label="Download Resume" 
@@ -77,6 +77,17 @@
       <path d="M4 15H16V17H4V15Z" fill="currentColor"/>
     </svg>
     Resume
+  </a>
+  <a href="{{ url_for('static', filename='resume/strategy_resume.pdf') }}" 
+     class="floating-strategy-btn" 
+     aria-label="Download Strategy Resume" 
+     download
+     target="_blank">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 13L6 9H8V3H12V9H14L10 13Z" fill="currentColor"/>
+      <path d="M4 15H16V17H4V15Z" fill="currentColor"/>
+    </svg>
+    Strategy Resume
   </a>
 
   <!-- Mobile bottom navigation -->
