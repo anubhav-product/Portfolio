@@ -1,18 +1,60 @@
 {% extends "base.html" %}
 
 {% block title %}Skills - Anubhav Verma{% endblock %}
-{% block description %}Product management, AI development, and technical skills{% endblock %}
+{% block description %}Product management, strategy consulting, AI development, and business acumen skills{% endblock %}
 
 {% block content %}
 <section class="section">
   <div class="container">
     <div class="section-header fade-in">
-      <h3>Skills</h3>
-      <p>Focused capabilities relevant to product roles and AI-driven products.</p>
+      <h3>Skills & Expertise</h3>
+      <p>Hybrid capabilities in strategy consulting, product management, and AI development—bridging business thinking with execution.</p>
     </div>
 
-    <div class="skill-grid">
-      <div class="skill-card fade-in stagger-1">
+    <!-- Strategic & Technical Bridge -->
+    <div style="margin-bottom: 60px; padding: 32px; background: linear-gradient(135deg, rgba(0, 217, 255, 0.08) 0%, rgba(16, 185, 129, 0.08) 100%); border: 1px solid rgba(0, 217, 255, 0.2); border-radius: 12px;">
+      <h4 style="color: #00d9ff; margin-bottom: 16px;">🧠 Strategy + Execution: A Rare Combination</h4>
+      <p style="margin-bottom: 16px; color: rgba(255, 255, 255, 0.85); line-height: 1.8;">Most PM candidates specialize in either strategy or execution. I bridge both. I can think like a strategist (structured problem-solving, market analysis, competitive positioning) AND execute like an engineer (ship products, code fluency, system design). This combination is what transformation and 0-to-1 roles demand.</p>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 24px;">
+        <div style="padding: 20px; background: rgba(0, 217, 255, 0.05); border-left: 4px solid #00d9ff; border-radius: 8px;">
+          <h5 style="color: #00d9ff; margin-bottom: 12px; font-size: 15px;">🧭 Strategic Layer</h5>
+          <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: rgba(255, 255, 255, 0.85); line-height: 1.6;">
+            <li>Problem structuring (MECE, issue trees)</li>
+            <li>Market and competitive analysis</li>
+            <li>Business model design</li>
+            <li>Financial and unit economics thinking</li>
+            <li>Risk identification and mitigation</li>
+            <li>Long-term positioning and strategy</li>
+          </ul>
+        </div>
+        <div style="padding: 20px; background: rgba(0, 217, 255, 0.05); border-left: 4px solid #00d9ff; border-radius: 8px;">
+          <h5 style="color: #00d9ff; margin-bottom: 12px; font-size: 15px;">⚡ Execution Layer</h5>
+          <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: rgba(255, 255, 255, 0.85); line-height: 1.6;">
+            <li>Full-stack product development (0-to-1)</li>
+            <li>Technical architecture and design</li>
+            <li>Python, SQL, APIs, cloud deployment</li>
+            <li>AI/ML product lifecycle</li>
+            <li>Data-driven iteration and testing</li>
+            <li>Ship fast, learn faster mindset</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+      <!-- Strategic Thinking -->
+      <div class="skill-card fade-in stagger-1" style="grid-column: 1 / -1; background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%); border: 1px solid rgba(0, 217, 255, 0.3);">
+        <h4 style="color: #00d9ff; margin-bottom: 12px;">🧠 Strategic Thinking & Consulting</h4>
+        <p style="margin-bottom: 16px; color: rgba(255, 255, 255, 0.85);">Structured problem-solving across business, market, and operational challenges using tested frameworks.</p>
+        <ul>
+          <li><strong>Problem Structuring:</strong> MECE frameworks, issue trees, first-principles analysis</li>
+          <li><strong>Market Analysis:</strong> Porter's Five Forces, competitive positioning, market entry strategy</li>
+          <li><strong>Business Strategy:</strong> Value chain analysis, cost structure mapping, strategic trade-offs</li>
+          <li><strong>Organizational Strategy:</strong> McKinsey 7S framework, capability gaps, change management</li>
+          <li><strong>Data-Driven Insights:</strong> Hypothesis testing, statistical rigor, scenario planning</li>
+          <li><strong>Recommendation Development:</strong> Business cases, implementation roadmaps, risk mitigation</li>
+        </ul>
+      </div>
+
+      <div class="skill-card fade-in stagger-2">
         <h4>Product Strategy &amp; Execution</h4>
         <ul>
           <li>Product vision, strategy, and roadmapping</li>
@@ -26,7 +68,7 @@
         </ul>
       </div>
 
-      <div class="skill-card fade-in stagger-2">
+      <div class="skill-card fade-in stagger-3">
         <h4>AI &amp; Technical Capabilities</h4>
         <ul>
           <li>AI/ML product development lifecycle</li>
@@ -40,7 +82,21 @@
         </ul>
       </div>
 
-      <div class="skill-card fade-in stagger-3">
+      <div class="skill-card fade-in stagger-4">
+        <h4>Business &amp; Financial Thinking</h4>
+        <ul>
+          <li>Unit economics &amp; profitability analysis</li>
+          <li>Cost structure mapping &amp; efficiency optimization</li>
+          <li>Revenue modeling &amp; pricing strategy</li>
+          <li>ROI analysis &amp; resource allocation</li>
+          <li>Business case development &amp; financial projections</li>
+          <li>Margin analysis &amp; leverage point identification</li>
+          <li>Trade-off evaluation (growth vs. profitability, scale vs. quality)</li>
+          <li>Acquisition &amp; retention economics</li>
+        </ul>
+      </div>
+
+      <div class="skill-card fade-in stagger-5">
         <h4>Stakeholder &amp; Analytics</h4>
         <ul>
           <li>KPI diagnostics &amp; metrics definition</li>
@@ -54,7 +110,19 @@
         </ul>
       </div>
 
-      <div class="skill-card fade-in stagger-4">
+      <div class="skill-card fade-in stagger-6">
+        <h4>Strategic Frameworks Mastery</h4>
+        <ul>
+          <li><strong>Market Analysis:</strong> McKinsey 7S, Porter's Five Forces, BCG Growth-Share Matrix</li>
+          <li><strong>Problem Solving:</strong> MECE structuring, issue trees, hypothesis-driven analysis</li>
+          <li><strong>Competitive Strategy:</strong> Positioning frameworks, market entry strategies, differentiation</li>
+          <li><strong>Organizational:</strong> SWOT analysis, value chain mapping, strategic trade-offs</li>
+          <li><strong>Financial:</strong> Cost structure analysis, unit economics, profitability drivers</li>
+          <li><strong>Strategic Planning:</strong> Scenario planning, recommendation frameworks, implementation roadmaps</li>
+        </ul>
+      </div>
+
+      <div class="skill-card fade-in stagger-7">
         <h4>Tools &amp; Platforms</h4>
         <ul>
           <li>Jira, Linear (project management)</li>
@@ -80,16 +148,16 @@
         </ul>
       </div>
 
-      <div class="skill-card fade-in stagger-6">
+      <div class="skill-card fade-in stagger-8">
         <h4>Education</h4>
         <div class="education-item">
           <h5>B.E. Chemical Engineering</h5>
           <p class="institution">Birla Institute of Technology and Science (BITS) Pilani, Goa Campus</p>
-          <p class="education-note">Foundation in systems thinking, process optimization, and data-driven problem-solving—skills directly applicable to product development and technical execution.</p>
+          <p class="education-note">Foundation in systems thinking, process optimization, and data-driven problem-solving—skills directly applicable to strategic consulting, product development, and technical execution.</p>
         </div>
       </div>
 
-      <div class="skill-card fade-in stagger-6">
+      <div class="skill-card fade-in stagger-9">
         <h4>Certifications & Learning</h4>
         <ul>
           <li>AI Product Management — Duke University (Coursera) <span class="tag">In Progress</span></li>
@@ -100,21 +168,32 @@
         </ul>
       </div>
 
-      <div class="skill-card fade-in stagger-7">
+      <div class="skill-card fade-in stagger-10">
         <h4>Soft Skills & Leadership</h4>
         <ul>
           <li><strong>Stakeholder Management:</strong> Aligning cross-functional teams (engineering, design, business)</li>
-          <li><strong>Communication:</strong> Translating technical concepts for non-technical audiences</li>
+          <li><strong>Communication:</strong> Translating technical/complex concepts for diverse audiences</li>
           <li><strong>Conflict Resolution:</strong> Navigating tradeoffs between competing priorities</li>
           <li><strong>User Empathy:</strong> Conducting interviews, synthesizing feedback into insights</li>
           <li><strong>Decision-Making:</strong> Using frameworks to make defensible choices under uncertainty</li>
+          <li><strong>Strategic Thinking:</strong> Systems-level analysis, long-term planning, identifying leverage points</li>
           <li><strong>Adaptability:</strong> Pivoting strategy based on new data or market changes</li>
           <li><strong>Ownership Mindset:</strong> End-to-end accountability from ideation to deployment</li>
         </ul>
       </div>
 
-      <div class="skill-card fade-in stagger-8">
+      <div class="skill-card fade-in stagger-11">
         <h4>Experience & Projects</h4>
+        <div style="margin-bottom: 20px;">
+          <h5 style="color: var(--primary); font-size: 16px; margin: 0 0 4px;">Strategy Consulting</h5>
+          <p style="color: var(--muted); font-size: 14px; margin: 0 0 8px;">2024 - Present</p>
+          <ul style="margin: 0; padding-left: 20px;">
+            <li>Strategy consulting and procurement modeling with TKIL (Thyssenkrupp Industries India).</li>
+            <li>Analyzed industrial supply chains, trading flows, and operational resilience.</li>
+            <li>Developed strategic frameworks for market positioning and cost optimization.</li>
+            <li>Built data-driven recommendations for business strategy and risk mitigation.</li>
+          </ul>
+        </div>
         <div style="margin-bottom: 20px;">
           <h5 style="color: var(--primary); font-size: 16px; margin: 0 0 4px;">Independent Product Builder</h5>
           <p style="color: var(--muted); font-size: 14px; margin: 0 0 8px;">2023 - Present</p>
@@ -122,25 +201,16 @@
             <li>Shipped 2 AI products from 0-to-1 (Product Playground, AI Interview Copilot)</li>
             <li>Conducted 25+ user interviews to validate product-market fit</li>
             <li>Managed full product lifecycle: ideation, design, development, deployment, iteration</li>
-            <li>Built products serving users across product management and recruiting domains</li>
-          </ul>
-        </div>
-        <div style="margin-bottom: 20px;">
-          <h5 style="color: var(--primary); font-size: 16px; margin: 0 0 4px;">Strategy Consulting Experience</h5>
-          <p style="color: var(--muted); font-size: 14px; margin: 0 0 8px;">2024 - Present</p>
-          <ul style="margin: 0; padding-left: 20px;">
-            <li>Strategy consulting and procurement modeling experience with TKIL (Thyssenkrupp Industries India).</li>
-            <li>Mapped trading and supply chain flows to support strategic recommendations.</li>
-            <li>Built framework-driven insights for market positioning and operational resilience.</li>
+            <li>Built products serving 100+ users across product management and recruiting domains</li>
           </ul>
         </div>
         <div>
-          <h5 style="color: var(--primary); font-size: 16px; margin: 0 0 4px;">Product Training & Consulting</h5>
+          <h5 style="color: var(--primary); font-size: 16px; margin: 0 0 4px;">Training & Professional Development</h5>
           <p style="color: var(--muted); font-size: 14px; margin: 0 0 8px;">2024 - Present</p>
           <ul style="margin: 0; padding-left: 20px;">
-            <li>Completed Duke AI Product Management & McKinsey Forward programs</li>
+            <li>Completed Duke AI Product Management & McKinsey Strategic Leadership programs</li>
             <li>Applied frameworks to real product challenges (RICE+Trust, Problem Framing Canvas)</li>
-            <li>Analyzed 50+ product decisions using structured methodologies</li>
+            <li>Analyzed 50+ product decisions and business strategies using structured methodologies</li>
           </ul>
         </div>
       </div>
