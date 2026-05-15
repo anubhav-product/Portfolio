@@ -24,6 +24,11 @@ def skills():
     return render_template("skills.html")
 
 
+@app.route("/strategy")
+def strategy():
+    return render_template("strategy.html")
+
+
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
